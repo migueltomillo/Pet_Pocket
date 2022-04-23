@@ -1,0 +1,43 @@
+h1{
+    font-size: 30px;
+    font-family: 'Times New Roman';
+    color: blueviolet;
+    background-color: rgb(233, 186, 227);
+}
+footer,nav{
+    color: blue;
+    border: 1px solid black;
+    display: block;
+}
+#fondo{
+    background: rgba(209, 46, 196, 0.082);
+}
+#menu li{
+    display:inline-block;
+    list-style: none;
+    padding: 10px;
+    padding-left: 0;
+}
+#seccion{
+    margin: 30px;
+    width: 800px;
+    padding: 10px;
+}
+#parrafo{
+    font-size: 20px;
+}
+#barra{
+    width: 300px;
+    float:right;
+    display: block;
+}
+#pie{
+    clear: both;
+    font-style: oblique;
+    font-size:medium;
+    color: black;
+    background: rgb(142, 142, 204);
+}
+h4{
+    font-family: 'Times New Roman', Times, serif;
+}

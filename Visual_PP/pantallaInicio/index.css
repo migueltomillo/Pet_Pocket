@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+  }
+
+a{
+    text-decoration: none;
+    color: #282846;
+    
+    font-weight: bold;
+}
+
+header{
+    display: flex;
+    justify-content:space-between;
+    background-color: #FFC51C;
+    padding: 30px;
+    align-items: center;
+    min-height: 70px;
+}
+.logo{
+    align-items: center;
+    font-size: 36px;
+    font-weight: 700,bold;
+    display: flex;
+}
+.logo img{
+    margin-right: 10px;
+    width: 48px;
+    height: 49px;
+    left: 73px;
+    top: 45px;
+}
+
+.nav-link{
+    font-size: 26px;
+    margin-left: 20px;
+}
+
+.nav-link:hover{
+    color: #4b4b88;
+}
+
+@media (max-width:700px) {
+    header{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* main */
+
+body{
+    background-color: #FED049;
+    background-image: url(/Visual_PP/pantallaInicio/multimedia/fondo\ figma.png);
+}
+main{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.registroLogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+figure{
+    width: 614px;
+    height: 588px;
+}
+
+h2{
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+}
+
+.botonInicio{
+    margin-top: 30px;
+    width: 400px;
+    padding: 10px;
+    background: #007580;
+    box-shadow: 0px 9px 0px 1px #074F69;
+    border-radius: 71px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+}
+.botonRegistro{
+    margin-top: 60px;
+    width: 400px;
+    padding: 10px;
+    background: #FFC51C;
+    box-shadow: 0px 9px 0px 1px #DAA200;;
+    border-radius: 71px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    color: #282846;
+}
+
+/*footer*/
+footer{
+position: absolute;
+width: 100%;
+padding: 40px;
+background: #085E7D;
+color: #D8EBE4;
+}
+
+.sobre_nosotros{
+    text-align: center;
+}
+.mision{
+    text-align: center;
+}
+.vision{
+    text-align: center;
+}
+
+.sobre_nosotros p{
+    font-size: 26px;
+    font-weight: 700;
+    padding: 30px;
+    color: #074F69;
+}
+
+.mision p{
+    font-size: 26px;
+    font-weight: 700;
+    padding: 30px;
+    color: #074F69;
+}
+.vision p{
+    font-size: 26px;
+    font-weight: 700;
+    padding: 30px;
+    color: #074F69;
+}
