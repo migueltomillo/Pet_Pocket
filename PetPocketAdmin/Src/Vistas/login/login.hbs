@@ -1,23 +1,28 @@
-<LINK REL=StyleSheet HREF="/css/login/ingreso.css" TYPE="text/css" MEDIA=screen>
-<form action="/login" method="POST" id="ingresar">
-<div id="imagen">
-  <img src="/img/fondo.png" >
-</div>
-  <div id="contenedor">
-    <div id="login">
-      Login
-    </div>
-    <div id="datos">
-      <input type="text" id="Nombre" name="username" placeholder="Usuario:">
-    </div>
-    <div id="contraseñas">
-      <input type="password" id="Contraseña" name="password" placeholder="Contraseña:">
-    </div>
-    <div>
-      <button type="submit" id="boton">Ingresar</button>
-    </div>
-    <div id="sesion">
-     <a href="/Registro"><button type="button">Registro</button></a>
-    </div>
-  </div>
-</form>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="/multimedia/Recurso 4.ico">
+    <link rel="stylesheet" href="/css/login.css" />
+    <body>
+<header>
+        <h1>Bienvenido de vuelta</h1>
+    </header>
+    <form action="/login" method="POST" id="ingresar">
+    <h2>Iniciar Sesion</h2>
+        <div id="datos">
+            <input type="text" id="Nombre" name="username" placeholder="Usuario:" class="controlador">
+        </div>
+        <div id="contraseñas">
+            <input type="password" id="Contraseña" name="password" placeholder="Contraseña:" class="controlador">
+        </div>
+        <div>
+            <button type="submit" id="boton" class="boton">Ingresar</button>
+          </div>
+     
+    </form>
+    <figure>
+        <img src="/multimedia/perro.png" alt="perro" class="perro">
+    </figure>
+    <figure>
+        <img src="/multimedia/gato.png" alt="gato" class="gato">
+    </figure>
+</body>
+</html>

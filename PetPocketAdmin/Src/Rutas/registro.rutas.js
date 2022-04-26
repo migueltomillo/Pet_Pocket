@@ -9,4 +9,5 @@ rutas.get("/login", mostrarLogin)
 rutas.post("/login", Login)
 rutas.get("/CerrarSecion", cierreSesion)
 
+
 module.exports = rutas
