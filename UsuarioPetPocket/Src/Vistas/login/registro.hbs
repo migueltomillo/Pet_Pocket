@@ -8,8 +8,17 @@
    <div class="container">
      <div class="login-container">
        <div class="register">
-         <h2>Registrarse</h2>
-         <form action="/registro" method="POST">
+        {{#each max}}
+         <h2>Registrarse <input type="text" name="idUsuarios" id="numero" value="{{maximo}}" readonly></h2>
+        {{/each}}
+         <form action="/registro" method="POST" enctype="multipart/form-data">
+         <div id="imagen">
+            <label>Foto Usuario</label>
+            <div id="cambioImagen">
+                <img src="/img/user/NoImagen.jpg" id="imagenPrevisualizacion">
+            </div>
+            <input type="file" name="imagenUsuario" id="seleccionArchivos" accept="image/*" required>
+        </div>
             <input type="text" id="Nombre" name="username" placeholder="Usuario:" class="nombre">
             <input type="password" id="Contraseña" name="password" placeholder="Contraseña:" class="password">
                <br>
@@ -23,4 +32,6 @@
      </div>
    </div>
 </body>
+<script src="/Js/numero.js"></script>
+<script src="/Js/previsualizacion.js"></script>
 </html>

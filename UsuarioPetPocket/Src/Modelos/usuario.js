@@ -5,6 +5,7 @@ const usuarios =(sequelize, type) =>{
             primaryKey: true,
             autoIncrement: true,
         },
+        imagenUsuario: type.STRING,
         username: type.STRING(99),
         password: type.STRING,
         email: type.STRING, 
