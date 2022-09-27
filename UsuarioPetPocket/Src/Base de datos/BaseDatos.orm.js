@@ -17,6 +17,9 @@ mysql.createConnection({
 const usuarioModelo = require('../Modelos/usuario')
 const proyectoModelo = require('../Modelos/proyecto')
 
+//campaña//
+const campañasModelo = require('../Modelos/campaña')
+
 const sequelize = new Sequelize(
   'PetPocket',
   'root',
@@ -49,11 +52,17 @@ sequelize.sync({ force: false })
   const usuario = usuarioModelo(sequelize, Sequelize)
   const proyecto = proyectoModelo(sequelize, Sequelize)
 
+//campaña//
+  const campañas = campañasModelo(sequelize, Sequelize)
+
   usuario.hasMany(proyecto)
   proyecto.belongsTo(usuario)
 
+  campañas.hasMany(proyecto)
+  proyecto.belongsTo(campañas)
+
 module.exports = {
     usuario,
-    proyecto
-  
+    proyecto,
+    campañas
 }
