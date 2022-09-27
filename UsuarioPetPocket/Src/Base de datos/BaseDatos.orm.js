@@ -19,6 +19,7 @@ const proyectoModelo = require('../Modelos/proyecto')
 
 // Jimmy Lorente tienda
 const tiendaModelo = require('../Modelos/tienda')
+const productoModelo = require('../Modelos/producto')
 
 const sequelize = new Sequelize(
   'PetPocket',
@@ -54,6 +55,7 @@ sequelize.sync({ force: false })
 
   // Jimmy Lorente
   const tienda = tiendaModelo(sequelize, Sequelize);
+  const producto = productoModelo(sequelize, Sequelize);
 
   usuario.hasMany(proyecto)
   proyecto.belongsTo(usuario)
@@ -61,11 +63,15 @@ sequelize.sync({ force: false })
   usuario.hasMany(tienda)
   tienda.belongsTo(usuario)
 
+  tienda.hasMany(producto)
+  producto.belongsTo(tienda)
+
 
 
 module.exports = {
     usuario,
     proyecto,
-    tienda
+    tienda,
+    producto
   
 }
