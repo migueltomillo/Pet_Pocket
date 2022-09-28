@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="">
+<div id="foto">
+    <img src="">
+</div>
+<div id="contenedor">
+    <form action="/tienda/agregar/{{user.idUsuarios}}" method="post">
+    <div id="titulo">
+        <p> Agrega tus productos favoritos </p>
+    </div>
+
+    <div id="tituloTienda">
+        <label>Nombre Producto:</label>
+        <input type="text" name="tituloTienda" required>
+    </div>
+
+    <div id="fotoTienda">
+        <label> Tu Producto </label>
+        <input type="text" name="fotoTienda" required>
+    </div>
+    <div id="categoriaTienda">
+        <label> Categoria Producto:</label>
+        {{!-- <input type="text" name="FechaPerdido" required>  --}}
+               <select name="Categoria">
+                    <option>Juguete</option>
+                    <option>Comida</option>
+                    <option>Ropa</option>
+                </select>
+    </div>
+    <div id="descripccionTienda">
+        <label>Descripcion:</label>
+        <input type="text" name="descripccionTienda" required>
+    </div>
+
+    <div id="boton">
+        <button type="submit">SUBIR</button>
+    </div>
+
+    </form>
+</div>
