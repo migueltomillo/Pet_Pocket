@@ -1,13 +1,20 @@
 const tienda = {};
 
-const baseDatosSQL = require("../Database/basededatos.sql");
-const basededatosORM = require("../Database/basededatos.orm");
+const baseDatosSQL = require("../Base de datos/BaseDatos.sql");
+const basededatosORM = require("../Base de datos/BaseDatos.orm");
+
+const perdido= async (req, res) => {
+    try {
+        res.render('tienda/perdido');
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
 
 tienda.mostrar = async(req, res) => {
     const enlistar = await baseDatosSQL.query(
         "SELECT * FROM tiendas"
     );
-    res.render("tienda/perdido", {enlistar});
 }; 
 tienda.agregar =  async (req, res) => {
     const idProducto = req.params.id;
@@ -33,4 +40,6 @@ tienda.eliminar =  async (req, res) => {
 };
 
 
-module.exports = tienda;
+module.exports = {
+   perdido
+}

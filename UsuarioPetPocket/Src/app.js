@@ -66,6 +66,6 @@ app.use(require("./Rutas/registro.rutas"))
 app.use(require('./Rutas/bienvenida.rutas'));
 app.use(require('./Rutas/principal.rutas'));
 app.use(require('./Rutas/mensaje.rutas'));
-
+app.use(require('./Rutas/tienda.rutas'));
 
 module.exports = app;
