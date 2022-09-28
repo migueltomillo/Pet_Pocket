@@ -12,10 +12,9 @@ const perdido= async (req, res) => {
 }
 
 tienda.mostrar = async(req, res) => {
-    const enlistar = await baseDatosSQL.query(
-        "SELECT * FROM tiendas"
-    );
-}; 
+    const enlistar = await baseDatosSQL.query("SELECT * FROM tiendas")
+    res.render("tienda/perdido",{ enlistar});
+};
 tienda.agregar =  async (req, res) => {
     const idProducto = req.params.id;
     const {

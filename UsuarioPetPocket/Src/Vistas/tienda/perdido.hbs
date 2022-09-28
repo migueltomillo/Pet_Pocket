@@ -7,10 +7,10 @@
         {{#each enlistar}}
         <div id="tarjeta">
             <div id="titulo">
-                <p> Producto: {{}} </p>
+                <p> Producto: {{tituloTienda}}  </p>
 
             <div id="descripción">
-                <p> descripción: {{descripccionTienda}}</p>
+                <p> descripción: </p>
             </div>
             <div id="categoria">
                 <h1> Tipo </h1>
@@ -34,6 +34,7 @@
 
 
 {{!-- Mensaje para mostrar que no se a registrado  ningun producto --}}
+{{else}}
         <div id="mensaje">
             <p><b> Usted no a agreagado ningun producto</b></p>
             <a href="#">
