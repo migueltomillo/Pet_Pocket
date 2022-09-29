@@ -4,17 +4,17 @@ const sql = require("../Base de datos/BaseDatos.sql");
 const orm = require("../Base de datos/BaseDatos.orm");
 
 bellctl.mostrar = (req, res) =>{
-    res.render('/bells/agregar');
+    res.render('bells/agregar');
 }
 bellctl.mandar = async (req, res) =>{
-    const id = req.user.idUsuarios
+    //const id = req.user.idUsuarios
     const {titulo, descripcion, imagenbells} = req.body
     const nuevoEnvio = {
         titulo,
         descripcion,
         imagenbells
     }
-    await orm.bell.create(nuevoEnvio)
+    await orm.bells.create(nuevoEnvio)
     req.flash('success', 'Guardado con exito')
     res.redirect('/bells/listar/'+ id);   
 }
@@ -26,7 +26,7 @@ bellctl.lista = async(req, res)=>{
 bellctl.traer = async(req, res) =>{
     const ids = req.params.id
     const lista = await baseDatosSQL.query("select * from bells where idbells =?", [ids])
-    res.render("/bells/editar", {lista})
+    res.render("bells/editar", {lista})
 }
 
 bellctl.actualizar = async(req, res) =>{

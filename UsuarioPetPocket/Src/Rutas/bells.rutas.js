@@ -5,11 +5,11 @@ const { mostrar, mandar, lista, traer, actualizar, eliminar } = require('../Cont
 const { isLoggedIn } = require('../lib/auth')
 
 
-router.get('/agregar/:id', isLoggedIn, mostrar)
-router.post('/agregar/:id', isLoggedIn, mandar)
-router.get('/lista/:id', isLoggedIn, lista)
-router.get('/editar/:id', isLoggedIn, traer)
-router.post('/editar/:id', isLoggedIn, actualizar)
-router.get('/eliminar/:id', isLoggedIn, eliminar)
+router.get('/agregar/:id', mostrar)
+router.post('/agregar/' , mandar)
+router.get('/lista/:id', lista)
+router.get('/editar/:id', traer)
+router.post('/editar/:id', actualizar)
+router.get('/eliminar/:id', eliminar)
 
 module.exports = router;
