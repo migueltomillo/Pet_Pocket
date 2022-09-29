@@ -67,5 +67,7 @@ app.use(require('./Rutas/bienvenida.rutas'));
 app.use(require('./Rutas/principal.rutas'));
 app.use(require('./Rutas/mensaje.rutas'));
 
+//campaña
+app.use('/bells', require('./Rutas/bells.rutas'))
 
 module.exports = app;

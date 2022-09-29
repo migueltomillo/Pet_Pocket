@@ -1,20 +1,20 @@
-const campañas =(sequelize, type) =>{
-    return sequelize.define('campaña', {
-        idCampaña: {
+const bells =(sequelize, type) =>{
+    return sequelize.define('bells', {
+        idbell: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
         titulo: type.STRING(99),
         descripcion: type.STRING(99),
-        imagenCampaña: type.STRING,
+        imagenbells: type.STRING,
 
-        creacionCampaña:{
+        creacionbell:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionCampaña:{
+        actualizacionbell:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -24,4 +24,4 @@ const campañas =(sequelize, type) =>{
     })
 }
 
-module.exports = campañas
+module.exports = bells
