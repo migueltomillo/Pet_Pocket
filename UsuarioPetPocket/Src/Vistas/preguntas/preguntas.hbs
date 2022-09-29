@@ -1,32 +1,33 @@
 <link rel="stylesheet" href="/css/preguntas/preguntas.css">
 
-<nav>
-    <div>logo</div>
-    <div>
-        <p>Red Social</p>
-        <p>Perdidos</p>
-        <p>Adopcion</p>
-        <p>Campanas</p>
-        <p>Reporte</p>
-        <p>Ayuda</p>
-        <p>Donaciones</p>
-        <p>Tienda</p>
-    </div>
-    <div>
-        logo 2
-    </div>
     <h1>Ayuda Pet Pocket</h1>
-    <form action="">
-        <h2>Cual es tu duda?</h2>
-        <input type="text" placeholder="Escribe aqui tu pregunta">
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <button>Preguntar</button>
-    </form>
-    <div>
-        <h2>Preguntas Recientes</h2>
-        <div>
-            contenedor preguntas recientes 
-        </div>
+    <div id="contenedorP">
+    <div id="titulo">
+            <p class="info">Este espacio esta dedicado para todas las personas que tengan alguna duda sobre sus mascotas</p>
     </div>
-    
-</nav>
+
+    <form action="/preguntas/preguntas/{{user.idUsuarios}}" method="post"> {{!-aqui puede haber un error por el usuario}}
+        
+        
+            
+        <input type="text" name="tituloPregunta" required placeholder="Cual es tu pregunta" class="preguntar">
+        
+        
+        <input type="text" name="descripcionPregunta" required placeholder="Detalles de tu pregunta" class="Detalles">
+        
+        <div id="tiempoPregunta">
+            
+            <input type="date" name="fechaPregunta" required class="fePregunta">
+        
+        
+            <input type="time" name="horaPregunta" required class="hoPregunta">
+
+        </div>
+        
+        
+        <div id="boton">
+            <button type="submit" class="boton">Publicar</button>
+        </div>
+    </form>
+   </div>
+   

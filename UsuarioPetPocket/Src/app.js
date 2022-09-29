@@ -67,5 +67,6 @@ app.use(require('./Rutas/bienvenida.rutas'));
 app.use(require('./Rutas/principal.rutas'));
 app.use(require('./Rutas/mensaje.rutas'));
 
+app.use('/preguntas',require('./Rutas/preguntas.rutas'))
 
 module.exports = app;
