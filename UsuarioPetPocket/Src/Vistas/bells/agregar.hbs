@@ -2,6 +2,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/paginaPrincipalCompleta.css" />
+    <link rel="stylesheet" href="/css/agregarbell.css" />
     <link rel="icon" href="/multimedia/Recurso 4.ico">
 
 <body
@@ -42,15 +43,17 @@ Es un ejemplo para llamar a lo que deseen
     
     <!--inicio del crud-->
     <form action="/bells/agregar/{{user.idUsuarios}}" method="post"></form>
+    
+    <div class="container">
     <div id="titulo">
-        <p>Agregar Campaña</p>
+       <b><u> <p>Agregar Campaña</p></u></b>
     </div>
     <div id="Titulo">
         <label>Titulo de la Campaña:</label>
         <input type="text" name="titulo" required>
     </div>
     <div id="Descripcion">
-        <label>Descriocion de la Campaña:</label>
+        <label>Descripcion de la Campaña:</label>
         <input type="text" name="descripcion" required>
     </div>
     <div id="Imagenbells">
@@ -58,11 +61,13 @@ Es un ejemplo para llamar a lo que deseen
         <input type="text" name="imagenbells" required>
     </div>
     <div id="boton">
-        <button type="submit">Guardar</button>
+        <button type="submit" href="../bells/listar.hbs">Guardar</button>
+    </div>
     </div>
     </form>
 </div>
 
+<br></br>
     <!--fin del crud-->
 
                 <footer id="pie">
