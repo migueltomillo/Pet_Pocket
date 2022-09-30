@@ -1,11 +1,14 @@
 const express = require('express');
-const { Mostrar } = require('../Controladores/index.controlador');
-const rutas = express.Router()
+const router = express.Router();
 
-const {} = require('../Controladores/veterinaria.controlador')
-const {} = require('../Lib/auth');
+const { mostrar, mandar, lista, traer, actualizar } = require('../Controladores/vet.controlador');
+const { isLoggedIn } = require('../lib/auth')
 
 
-rutas.get('/', Mostrar)
+router.get('/agregar/:id', mostrar)
+router.post('/agregar/' , mandar)
+router.get('/lista/:id', lista)
+router.get('/editar/:id', traer)
+router.post('/lista/:id', actualizar)
 
 module.exports = router;
