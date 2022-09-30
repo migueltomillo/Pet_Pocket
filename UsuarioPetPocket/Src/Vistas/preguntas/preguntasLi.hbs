@@ -1,7 +1,9 @@
 <link rel="stylesheet" href="/css/preguntas/preguntasLi.css">
+
 <form action="/preguntas/preguntasLi/{{user.idUsuarios}}" method="get"></form>
 <div id="contenedor">
-    <div class="row">
+    <h1 class="tusPreg">Tus Preguntas</h1>
+    <div class="contenedorTar">
         {{#each lista}}
         <div id="tarjeta">
             <div id="idPregunta">
