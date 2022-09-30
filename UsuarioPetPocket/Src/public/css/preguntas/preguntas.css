@@ -9,7 +9,7 @@ h1{
     font-size: 4rem;
     color: #277bc0;
 }
-.info{
+#info{
     margin-top: 5vh;
     font-size: 1.5rem;
 }
@@ -21,7 +21,7 @@ form{
     gap: 10px;
 }
 
-.preguntar{
+#preguntar{
     margin-left: 10vw;
     margin-right: 20vw;
     border: none;
@@ -32,7 +32,7 @@ form{
 }
 
 
-.Detalles{
+#Detalles{
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 5vh;
@@ -43,7 +43,7 @@ form{
     font-size: 2rem;
 }
 
-.boton{
+#boton{
     margin-top: 4vh;
     background-color: #277bc0;
     outline: none;
@@ -52,9 +52,11 @@ form{
     padding: 1rem;
     border-radius: 1rem;
     color: #FFB200;
+    margin-left: 25rem;
+    margin-right: 25rem;
 }
 
-.boton:hover{
+#boton:hover{
     background-color: #FFB200;
     color: #277bc0;
 }

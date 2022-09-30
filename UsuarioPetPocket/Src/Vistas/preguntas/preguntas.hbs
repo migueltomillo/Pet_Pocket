@@ -3,31 +3,31 @@
     <h1>Ayuda Pet Pocket</h1>
     <div id="contenedorP">
     <div id="titulo">
-            <p class="info">Este espacio esta dedicado para todas las personas que tengan alguna duda sobre sus mascotas</p>
+            <p id="info">Este espacio esta dedicado para todas las personas que tengan alguna duda sobre sus mascotas</p>
     </div>
 
     <form action="/preguntas/preguntas/{{user.idUsuarios}}" method="post"> {{!-aqui puede haber un error por el usuario}}
         
         
             
-        <input type="text" name="tituloPregunta" required placeholder="Cual es tu pregunta" class="preguntar">
+        <input type="text" name="tituloPregunta" required placeholder="Cual es tu pregunta" id="preguntar">
         
         
-        <input type="text" name="descripcionPregunta" required placeholder="Detalles de tu pregunta" class="Detalles">
+        <input type="text" name="descripcionPregunta" required placeholder="Detalles de tu pregunta" id="Detalles">
         
         <div id="tiempoPregunta">
             
-            <input type="date" name="fechaPregunta" required class="fePregunta">
+            <input type="date" name="fechaPregunta" required id="fePregunta">
         
         
-            <input type="time" name="horaPregunta" required class="hoPregunta">
+            <input type="time" name="horaPregunta" required id="hoPregunta">
 
         </div>
         
         
-        <div id="boton">
-            <button type="submit" class="boton">Publicar</button>
-        </div>
+        
+        <button type="submit" id="boton">Publicar</button>
+        
     </form>
    </div>
    
