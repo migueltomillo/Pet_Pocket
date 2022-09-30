@@ -24,13 +24,13 @@ passport.use(
         if (validPassword) {
           done(null, user, req.flash("message", "Bienvenido" + " " + user.username));
         } else {
-          done(null, false, req.flash("message", "Datos incorrecta"));
+          done(null, false, req.flash("message", "Bienvenido"));
         }
       } else {
         return done(
           null,
           false,
-          req.flash("message", "El nombre de usuario no existe.")
+          req.flash("message", "Bienvenido.")
         );
       }
     }
@@ -38,69 +38,66 @@ passport.use(
 );
 
 passport.use(
-  "local.signup",
-  new LocalStrategy(
-    {
-      usernameField: "username",
-      passwordField: "password",
-      passReqToCallback: true
-    },
-    async (req, username, password, done) => {
-      const usuarios = await orm.usuario.findOne({ where: { username: username } });
-      if (usuarios === null) {
-        const {idUsuarios}= req.body
-        let nuevoUsuario = {
-          username,
-          password
-        };
-        nuevoUsuario.password = await helpers.encryptPassword(password);
-        const resultado = await orm.usuario.create(nuevoUsuario);
-        nuevoUsuario.id = resultado.insertId;
-        return done(null, nuevoUsuario);
+	"local.signup",
+	new LocalStrategy(
+		{
+			usernameField: "username",
+			passwordField: "password",
+			passReqToCallback: true
+		},
+		async (req, username, password, done) => {
+			const users = await orm.users.findOne({ where: { username: username } });
+			if (users === null) {
+				const { idUsuarios } = req.body
+				let newUser = {
+					idUsuarios: idUsuarios,
+				
+					username: username,
+					password: password
+				};
+			
+				newUser.password = await helpers.encryptPassword(password);
+				const result = await orm.users.create(newUser);
 
-        const imagenUsuario = req.files.imagenUsuario
-        const validacion = path.extname(imagenUsuario.name)
+		
 
-        const extencion = [".PNG", ".JPG", ".JPEG", ".GIF", ".TIF", ".png", ".jpg", ".jpeg", ".gif", ".tif"];
+				newUser.id = result.insertId;
 
-        if (!extencion.includes(validacion)) {
-          req.flash("success", "Imagen no compatible.")
-        }
+				const imagenUsuario = req.files.imagenUsuario
+				const validation = path.extname(imagenUsuario.name)
 
-        if (!req.files) {
-          req.flash("success", "Imagen no insertada.")
-        }
+				const extension = [".PNG", ".JPG", ".JPEG", ".GIF", ".TIF", ".png", ".jpg", ".jpeg", ".gif", ".tif"];
 
-        const ubicacion = __dirname + "/../public/multimedia/user/" + imagenUsuario.name;
+				if (!extension.includes(validation)) {
+					req.flash("success", "Imagen no compatible.")
+				}
 
-        imagenUsuario.mv(ubicacion, function (err) {
-          if (err) {
-            return req.flash("message", err)
-          }
-          sql.query("UPDATE usuarios SET imagesUser = ? WHERE idUsuarios = ?", [imagenUsuario.name, idUsuarios])
-          console.log("Imagen de usuario ingresada")
-        })
+				if (!req.files) {
+					req.flash("success", "Imagen no ingresada.")
+				}
 
-      } else {
-        if (usuarios) {
-          const usuario = usuarios
-          if (username == usuario.username) {
-            done(null, false, req.flash("message", "El nombre de usuario ya existe."))
-          } else {
-            let nuevoUsuario = {
-              username,
-              password
-            };
-            nuevoUsuario.password = await helpers.encryptPassword(password);
-            const resultado = await orm.usuario.create(nuevoUsuario);
-            nuevoUsuario.id = resultado.insertId;
-            return done(null, nuevoUsuario);
-          }
-        }
-      }
-    }
-  )
+				const location = __dirname + "/../public/multimedia/user/" + imagenUsuario.name;
+
+				imagenUsuario.mv(location, function (err) {
+					if (err) {
+						return req.flash("message", err)
+					}
+					sql.query("UPDATE users SET imagenUsuario = ? WHERE idUsuarios = ?", [imagenUsuario.name, idUsuarios])
+					console.log("Imagen ingresada")
+				})
+				return done(null, newUser);
+			}
+		}
+	)
 );
+
+passport.serializeUser(function (user, done) {
+	done(null, user);
+});
+
+passport.deserializeUser(function (user, done) {
+	done(null, user);
+}); 
 
 passport.serializeUser(function (user, done) {
   done(null, user);

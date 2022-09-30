@@ -13,7 +13,7 @@ mysql.createConnection({
         console.info("Base de datos creada o comprobada correctamente");
     })
 })
-
+const formaPagoModelos = require('../Modelos/mascotas')
 const usuarioModelo = require('../Modelos/usuario')
 const proyectoModelo = require('../Modelos/proyecto')
 
@@ -49,14 +49,14 @@ sequelize.sync({ force: false })
 
   const usuario = usuarioModelo(sequelize, Sequelize)
   const proyecto = proyectoModelo(sequelize, Sequelize)
+  const formaPago = formaPagoModelos(sequelize, Sequelize)
 
-
-  usuario.hasMany(proyecto)
   proyecto.belongsTo(usuario)
 
 
 module.exports = {
     usuario,
-    proyecto
+    proyecto,
+    formaPago
     
 }

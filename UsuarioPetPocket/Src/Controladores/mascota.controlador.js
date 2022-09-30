@@ -1,30 +1,70 @@
-const registro = {};
+const formaPagoCtl = {}
 
-const passport = require('passport');
+const orm = require('../configuracionBaseDatos/baseDatos.orm')
+const sql = require('../configuracionBaseDatos/baseDatos.sql')
 
-registro.mostrarRegistro = async(req, res) => {
-    res.render('login/registro');
-};
+formaPagoCtl.mostrar = (req, res) => {
+    res.render('facturacionElectronica/formasPago/agregar');
+}
 
-registro.Registro = passport.authenticate('local.signup', {
-    successRedirect: '/CerrarSecion',
-    failureRedirect: '/Registro',
-    failureFlash: true
-});
+formaPagoCtl.mandar = async (req, res) => {
+    const id = req.user.idUsuarios
+    const { nombreFormaPago, codigoFormaPagos } = req.body
+    const nuevoEnvio = {
+        nombreFormaPago,
+        codigoFormaPagos,
+        detalleRolUsuarioIdDetalleRolUsuario: id
+    }
+    await orm.formaPago.create(nuevoEnvio)
+    req.flash('success', 'Se Guardo con exito')
+    res.redirect('/formaPago/lista/' + id);
+}
 
-registro.mostrarLogin = (req, res, next) => {
-    res.render('login/login');
-};
+formaPagoCtl.lista = async (req, res) => {
+    const lista = await sql.query('select * from formaPagos')
+    res.render('facturacionElectronica/formasPago/lista', { lista })
+}
 
-registro.Login = passport.authenticate('local.signin', {
-    successRedirect: '/inicio',
-    failureRedirect: '/',
-    failureFlash: true
-}); 
+formaPagoCtl.eliminar = async (req, res) => {
+    const id = req.params.id
+    await orm.formaPago.destroy({ where: { idFormaPagos: id } })
+        .then(() => {
+            req.flash('success', 'se elimino con exito')
+            res.redirect('/formaPago/lista/' + ids);
+        })
+}
 
-registro.cierreSesion = (req, res, next) => {
-    req.logOut();
-    res.redirect('/');
-};
+formaPagoCtl.tarer = async (req, res) => {
+    const id = req.params.id
+    const lista = await sql.query('select * from formaPagos where idFormaPagos = ?', [id])
+    res.render('facturacionElectronica/formasPago/editar', { lista })
+}
 
-module.exports = registro;
+formaPagoCtl.editar = async (req, res) => {
+    const id = req.params.id
+    const ids = req.user.idUsuarios
+    const { nombreFormaPago, codigoFormaPagos } = req.body
+    const nuevoEnvio = {
+        nombreFormaPago,
+        codigoFormaPagos,
+        detalleRolUsuarioIdDetalleRolUsuario: ids
+    }
+    await orm.formaPago.findOne({ where: { idFormaPagos: id } })
+        .then(actualizar => {
+            actualizar.update(nuevoEnvio)
+            req.flash('success', 'se actualizo con exito')
+            res.redirect('/formaPago/lista/' + ids);
+        })
+}
+
+formaPagoCtl.eliminar = async (req, res) => {
+    const ids = req.params.id
+    const id = req.user.idUsuarios
+    await orm.formaPago.destroy({ where: { idFormaPagos: ids } })
+        .then(() => {
+            req.flash('success', 'Actuaizado con exito')
+            res.redirect('/formaPago/lista/' + id);
+        })
+}
+
+module.exports = formaPagoCtl

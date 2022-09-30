@@ -1,39 +1,36 @@
+<link rel="stylesheet" href="">
 
- 
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
- 
-  <link rel="stylesheet" href="" />
- 
-<body>
-   <div class="container">
-     <div class="login-container">
-       <div class="register">
+<form action="/Registro" method="POST" enctype="multipart/form-data">
+  <div id="container">
+    <div id="title">
+      <p>Registro
         {{#each maximo}}
-         <h2>Registrarse <input type="text" name="idUsuarios" id="numero" value="{{maximo}}" readonly/h2>
+        <input type="text" name="idUsuarios" id="number" value="{{max}}" readonly>
         {{/each}}
-
-         <form action="/registro" method="POST"
-         enctype="multipart/form-data">
-         
-            <input type="text" id="Nombre" name="username" placeholder="Usuario:" class="nombre">
-            <input type="password" id="Contraseña" name="password" placeholder="Contraseña:" class="password">
-               <br>
-<div id="imagen">
-            <label>Foto Usuario</label>
-            <div id="cambioImagen">
-                <img src="/img/user/NoImagen.jpg" id="imagenPrevisualizacion">
-            </div>
-            <input type="file" name="imagenUsuario" id="seleccionArchivos" accept="image/*" required>
-        </div>
-           <input type="submit" class="submit" value="Registrarse">
-                          <br>
-           <h8>¿ya tienes cuenta? <a href="http://localhost:4000/login">inicia sesion</a></h8>
-         </form>
-       </div>
-       
-     </div>
-   </div>
-</body>
-<script src="/js/numero.js"></script>
-<script src="/js/previsualizacion.js"></script>
-</html>
+      </p>
+    </div>
+    <div id="username">
+      <label>Nombre de usuario:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div id="password">
+      <label>Contraseña:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+  
+    <div id="imagenUsuario">
+      <label>Foto:</label>
+      <div id="changeImage">
+        <img src="/img/NoImage.jpg" id="imagePreview">
+      </div>
+      <input type="file" name="imagenUsuario" id="filePicker" accept="image/*" required>
+    </div>
+    <div id="submit">
+      <div id="button">
+        <button type="submit">Guardar</button>
+      </div>
+    </div>
+  </div>
+</form>
+<script src="/js/number.js"></script>
+<script src="/js/preview.js"></script>
