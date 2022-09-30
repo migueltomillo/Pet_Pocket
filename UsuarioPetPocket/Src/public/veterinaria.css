@@ -1,0 +1,51 @@
+* {
+    text-decoration: none;
+}
+
+body {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg);
+    font-family: cursive;
+}
+#titulo{
+    font-size: 40px;
+    font-family: cursive;
+    margin-top: 40px;
+    margin-left: 10px;
+ }
+ .contenedor{
+    background-color: #ffcb42;
+    width: 400px;
+    height: 420px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 25px;
+    border: solid 3px #277bc0;
+ }
+
+ input{
+    background-color: #277bc0;
+    border: solid 1px rgb(31, 28, 28);
+    padding: 5px;
+    width: 220px;
+    color: #fff;
+    margin-top: 1px;
+    border-radius: 20px;
+    
+ }
+
+ button{
+    background-color: #277bc0;
+    border: solid 1px rgb(31, 28, 28);
+    padding: 2px;
+    width: 150px;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+ }
+
+
+ h1 {
+    text-align: center;
+ }
