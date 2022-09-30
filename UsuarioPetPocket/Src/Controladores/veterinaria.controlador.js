@@ -1,30 +1,22 @@
-const registro = {};
+const veterinariaCtl = {}
 
-const passport = require('passport');
+const sql = require('../Base de datos/BaseDatos.sql')
 
-registro.mostrarRegistro = async(req, res) => {
-    res.render('login/registro');
-};
+const orm = require('../Base de datos/BaseDatos.orm')
 
-registro.Registro = passport.authenticate('local.signup', {
-    successRedirect: '/CerrarSecion',
-    failureRedirect: '/Registro',
-    failureFlash: true
-});
+veterinariaCtl.mostrar = (req, res) => {
+    res.render('veterinaria/veterinaria_pet');
+}
 
-registro.mostrarLogin = (req, res, next) => {
-    res.render('login/login');
-};
-
-registro.Login = passport.authenticate('local.signin', {
-    successRedirect: '/inicio',
-    failureRedirect: '/',
-    failureFlash: true
-}); 
-
-registro.cierreSesion = (req, res, next) => {
-    req.logOut();
-    res.redirect('/');
-};
-
-module.exports = registro;
+veterinariaCtl.mandar = async(req, res) =>{
+    const {nombre, sector, calle, telefono, especialidad} = req.body
+    const nuevo = {
+        nombre,
+        sector,
+        calle,
+        telefono,
+        especialidad
+    }
+    await orm.veterinaria.create(nuevo);
+    res.redirect('/veterinaria/veterinaria_pet/');
+}
