@@ -5,9 +5,12 @@ const usuarios =(sequelize, type) =>{
             primaryKey: true,
             autoIncrement: true,
         },
+        nombre: type.STRING(99),
+        apellido: type.STRING(99),
         username: type.STRING(99),
-        password: type.STRING,
+        foto: type.STRING(99),
         email: type.STRING, 
+        password: type.STRING,
         creacionUsuarios:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

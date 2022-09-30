@@ -48,9 +48,15 @@ passport.use(
     async (req, username, password, done) => {
       const usuarios = await orm.usuario.findOne({ where: { username: username } });
       if (usuarios === null) {
+        const { nombre, apellido, foto, email } = req.body
         let nuevoUsuario = {
+          nombre,
+          apellido,
           username,
+          foto,
+          email,
           password
+        
         };
         nuevoUsuario.password = await helpers.encryptPassword(password);
         const resultado = await orm.usuario.create(nuevoUsuario);
