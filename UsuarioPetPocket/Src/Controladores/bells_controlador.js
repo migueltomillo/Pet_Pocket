@@ -16,7 +16,7 @@ bellctl.mandar = async (req, res) => {
     }
     await orm.bells.create(nuevoEnvio)
     req.flash('success', 'Guardado con exito')
-    res.redirect('/bells/listar/' + id);
+    res.redirect('/bells/listar/' /*+ id */);
 }
 bellctl.lista = async (req, res) => {
     const lista = await sql.query("select * from bells")
@@ -25,7 +25,7 @@ bellctl.lista = async (req, res) => {
 
 bellctl.traer = async (req, res) => {
     const ids = req.params.id
-    const lista = await sql.query("select * from bells where idbells =?", [ids])
+    const lista = await sql.query("select * from bells where idbell =?", [ids])
     res.render("bells/editar", { lista })
 }
 
@@ -42,16 +42,16 @@ bellctl.actualizar = async (req, res) => {
         .then(actualizar => {
             actualizar.update(nuevoEnvio)
             req.flash('success', 'Actualizacion exitosa')
-            res.redirect('bells/listar/' /*+ id*/);
+            res.redirect('/bells/listar/' /*+ id*/);
         })
 }
 bellctl.eliminar = async (req, res) => {
     const ids = req.params.id
-    const id = req.user.idUsuario
-    await orm.bell.destroy({ where: { idbells: ids } })
+   /* const id = req.user.idUsuario*/
+    await orm.bells.destroy({ where: { idbell: ids } })
         .then(() => {
             req.flash('success', 'Actualizacion exitosa')
-            res.redirect('bells/listar/' /*+ id*/);
+            res.redirect('/bells/listar/' /*+ id*/);
         })
 }
 module.exports = bellctl;
