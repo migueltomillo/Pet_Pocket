@@ -2,7 +2,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/paginaPrincipalCompleta.css" />
-    <link rel="stylesheet" href="/css/agregarbell.css" />
+    <link rel="stylesheet" href="/css/editarbell.css" />
     <link rel="icon" href="/multimedia/Recurso 4.ico">
 
 <body
@@ -43,29 +43,32 @@ Es un ejemplo para llamar a lo que deseen
     <!--inicio del crud-->
     {{#each lista}}
     <form action="/bells/editar/{{idbells}}" method="post">
-    <div id="titulo">
-        <p>Agregar Campaña</p>
-    </div>
-    <div id="Titulo">
-        <label>Titulo de la Campaña:</label>
-        <input type="text" name="titulo" value="{{titulo}}" required>
-    </div>
-    <div id="Descripcion">
-        <label>Descripcion de la Campaña:</label>
-        <input type="text" name="descripcion" value="{{descripcion}}" required>
-    </div>
-    <div id="Imagenbells">
-        <label>Imagen de la Campaña:</label>
-        <input type="text" name="imagenbells" value="{{imagenbells}}" required>
-    </div>
-    <div id="boton">
-        <button type="submit">Actualizar</button>
+    
+    <div id="container">
+        <div id="titulo">
+            <p>Agregar Campaña</p>
+        </div>
+        <div id="Titulo">
+            <label>Titulo de la Campaña:</label>
+            <input type="text" name="titulo" value="{{titulo}}" required>
+        </div>
+        <div id="Descripcion">
+            <label>Descripcion de la Campaña:</label>
+            <input type="text" name="descripcion" value="{{descripcion}}" required>
+        </div>
+        <div id="Imagenbells">
+            <label>Imagen de la Campaña:</label>
+            <input type="text" name="imagenbells" value="{{imagenbells}}" required>
+        </div>
+        <div id="boton">
+            <button type="submit">Actualizar</button>
+        </div>
     </div>
     </form>
     {{/each}}
     
     <!--fin del crud-->
-
+                <br></br>
                 <footer id="pie">
                     <h4>Siguenos en nuestras redes </h4>
                     <aside id="barra">

@@ -2,39 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; /*Sirve para separar el texto de los bordes*/
-}#contenedor{
+}
+#contenedor{
     background-color: #ffcb42;
     width: 260px;
+    height:max-content;
     margin-left: 500px;
     border: solid 3px #277bc0;
     padding: 20px;
     margin-top: 60px;  
+    text-align: center;
 }
-#stitulo{
-    font-size: 30px;
-    font-family: cursive;
+
+ button{
+    background-color: #277bc0;
+    border: solid 1px rgb(31, 28, 28);
+    padding: 2px;
+    width: 130px;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 20px;
     text-align: center;
  }
-#b1{
-    background-color: #277bc0;
-    color: #fff;
-    padding: 5px;
-    border-radius: 20px;
-    border: solid 1px black;
-    margin-left: 80px;
-    margin-top: 10px;
-    display: inline-block;
- }
- #b2{
-    background-color: #277bc0;
-    color: #fff;
-    padding: 5px;
-    border-radius: 20px;
-    border: solid 1px black;
-     margin-left: 75px;
-    display: inline-block;
-    margin-top: 10px;
- }
+ 
  p{
     font-size: 20px;
     text-align: center;

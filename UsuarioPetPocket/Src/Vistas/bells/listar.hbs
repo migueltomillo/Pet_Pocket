@@ -43,46 +43,37 @@ Es un ejemplo para llamar a lo que deseen
     <!--inicio del crud-->
 <form action="/bells/listar/{{user.idUsuarios}}" method="get">
 <div id="contenedor">
-    <div class="row">
+    <div id="row">
         {{#each lista}}
         <div id="tarjeta">
-            <tr>
-            <td><div id="idbells">
+            <div id="idbells">
+                <p>{{idbell}}</p>
+            </div>
+            <div id="Titulo">
                 <p>{{titulo}}</p>
-            </div></td>
-            </tr>
-            <tr>
-            <td><div id="Titulo">
-                <p>{{titulo}}</p>
-            </div></td>
-            </tr>
-            <tr>
-            <td><div id="Descripcion">
+            </div>
+            <div id="Descripcion">
                 <p>{{descripcion}}</p>
-            </div></td>
-            </tr>
-            <tr>
-             <td><div id="Imagenbells">
+            </div>
+            <div id="Imagenbells">
                 <p>{{imagenbells}}</p>
-            </div></td>
-            </tr>
-            <tr>
-            <td><div id="boton">
+            </div>
+            <div id="boton">
                 <div id="editar">
                     <a href="/bells/editar/{{idbell}}"><button type="button">Editar</button></a>
                 </div>
                 <div id="eliminar">
                     <a href="/bells/eliminar/{{idbell}}"><button type="button">Eliminar</button></a>
                 </div>
-            </div></td>
-            </tr>
+            </div>
         </div>
         {{/each}}
     </div>
 </div>
+</form>
 
 <!--fin del crud-->
-
+                <br></br>
                 <footer id="pie">
                     <h4>Siguenos en nuestras redes </h4>
                     <aside id="barra">
