@@ -1,16 +1,14 @@
 const registro = {};
-const sql = require("../Base de datos/BaseDatos.sql");
+
 const passport = require('passport');
 
 registro.mostrarRegistro = async(req, res) => {
-    const maximo = await sql.query('select max (idUsuarios) as maximo FROM usuarios')
-    res.render('login/registro',{maximo} );
-   
+    res.render('login/registro');
 };
 
-registro.registro = passport.authenticate('local.signup', {
+registro.Registro = passport.authenticate('local.signup', {
     successRedirect: '/CerrarSecion',
-    failureRedirect: '/login',
+    failureRedirect: '/Registro',
     failureFlash: true
 });
 
@@ -19,8 +17,8 @@ registro.mostrarLogin = (req, res, next) => {
 };
 
 registro.Login = passport.authenticate('local.signin', {
-    successRedirect: '/login',
-    failureRedirect: '/mensaje_bienvenida',
+    successRedirect: '/mensaje_bienvenida',
+    failureRedirect: '/login',
     failureFlash: true
 }); 
 

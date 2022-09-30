@@ -1,7 +1,7 @@
 const express = require('express');
 const rutas = express.Router()
 
-const { mostrar, mandar, lista, eliminar, tarer, editar } = require('../controladores/formaPago.controlador')
+const { mostrar, mandar, lista, eliminar, tarer, editar } = require('../controladores/mascota.controlador')
 
 const { isLoggedIn } = require('../lib/auth')
 

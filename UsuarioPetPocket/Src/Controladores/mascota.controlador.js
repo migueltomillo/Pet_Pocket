@@ -1,70 +1,77 @@
-const formaPagoCtl = {}
+const mascotaCtl = {}
 
-const orm = require('../configuracionBaseDatos/baseDatos.orm')
-const sql = require('../configuracionBaseDatos/baseDatos.sql')
+const orm = require('../Base de datos/BaseDatos.orm')
+const sql = require('../Base de datos/BaseDatos.sql')
 
-formaPagoCtl.mostrar = (req, res) => {
-    res.render('facturacionElectronica/formasPago/agregar');
+mascotaCtl.mostrar = (req, res) => {
+    res.render('mascota/agregar');
 }
 
-formaPagoCtl.mandar = async (req, res) => {
+mascotaCtl.mandar = async (req, res) => {
     const id = req.user.idUsuarios
-    const { nombreFormaPago, codigoFormaPagos } = req.body
+    const { nombre, raza,edad,peso,descripcion,foto } = req.body
     const nuevoEnvio = {
-        nombreFormaPago,
-        codigoFormaPagos,
-        detalleRolUsuarioIdDetalleRolUsuario: id
+        nombre,
+        raza,
+        edad,
+        peso,
+        descripcion,
+        foto,
+
     }
-    await orm.formaPago.create(nuevoEnvio)
+    await orm.mascota.create(nuevoEnvio)
     req.flash('success', 'Se Guardo con exito')
-    res.redirect('/formaPago/lista/' + id);
+    res.redirect('/mascota/lista/' + id);
 }
 
-formaPagoCtl.lista = async (req, res) => {
-    const lista = await sql.query('select * from formaPagos')
-    res.render('facturacionElectronica/formasPago/lista', { lista })
+mascotaCtl.lista = async (req, res) => {
+    const lista = await sql.query('select * from mascotas')
+    res.render('mascota/lista', { lista })
 }
 
-formaPagoCtl.eliminar = async (req, res) => {
+mascotaCtl.eliminar = async (req, res) => {
     const id = req.params.id
-    await orm.formaPago.destroy({ where: { idFormaPagos: id } })
+    await orm.mascota.destroy({ where: { idMascotas: id } })
         .then(() => {
             req.flash('success', 'se elimino con exito')
-            res.redirect('/formaPago/lista/' + ids);
+            res.redirect('/mascota/eliminar/' + ids);
         })
 }
 
-formaPagoCtl.tarer = async (req, res) => {
+mascotaCtl.tarer = async (req, res) => {
     const id = req.params.id
-    const lista = await sql.query('select * from formaPagos where idFormaPagos = ?', [id])
-    res.render('facturacionElectronica/formasPago/editar', { lista })
+    const lista = await sql.query('select * from mascotas where idMascotas = ?', [id])
+    res.render('mascota/editar', { lista })
 }
 
-formaPagoCtl.editar = async (req, res) => {
+mascotaCtl.editar = async (req, res) => {
     const id = req.params.id
     const ids = req.user.idUsuarios
-    const { nombreFormaPago, codigoFormaPagos } = req.body
+    const { nombre, raza,edad,peso,descripcion,foto } = req.body
     const nuevoEnvio = {
-        nombreFormaPago,
-        codigoFormaPagos,
-        detalleRolUsuarioIdDetalleRolUsuario: ids
+        nombre,
+        raza,
+        edad,
+        peso,
+        descripcion,
+        foto,
     }
-    await orm.formaPago.findOne({ where: { idFormaPagos: id } })
+    await orm.mascota.findOne({ where: { idMascotas: id } })
         .then(actualizar => {
             actualizar.update(nuevoEnvio)
             req.flash('success', 'se actualizo con exito')
-            res.redirect('/formaPago/lista/' + ids);
+            res.redirect('/mascota/lista/' + ids);
         })
 }
 
-formaPagoCtl.eliminar = async (req, res) => {
+mascotaCtl.eliminar = async (req, res) => {
     const ids = req.params.id
     const id = req.user.idUsuarios
-    await orm.formaPago.destroy({ where: { idFormaPagos: ids } })
+    await orm.mascota.destroy({ where: { idMascotas: ids } })
         .then(() => {
-            req.flash('success', 'Actuaizado con exito')
-            res.redirect('/formaPago/lista/' + id);
+            req.flash('success', 'Se elimino con exito')
+            res.redirect('/mascota/lista/' + id);
         })
 }
 
-module.exports = formaPagoCtl
+module.exports = mascotaCtl

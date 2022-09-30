@@ -13,10 +13,9 @@ mysql.createConnection({
         console.info("Base de datos creada o comprobada correctamente");
     })
 })
-const formaPagoModelos = require('../Modelos/mascotas')
 const usuarioModelo = require('../Modelos/usuario')
+const mascotaModelo = require('../Modelos/mascotas')
 const proyectoModelo = require('../Modelos/proyecto')
-
 
 const sequelize = new Sequelize(
   'PetPocket',
@@ -46,17 +45,16 @@ sequelize.sync({ force: false })
   .then(() => {
     console.log("Tablas sincronizadas")
   })
-
   const usuario = usuarioModelo(sequelize, Sequelize)
+  const mascota = mascotaModelo(sequelize, Sequelize)
   const proyecto = proyectoModelo(sequelize, Sequelize)
-  const formaPago = formaPagoModelos(sequelize, Sequelize)
 
+  usuario.hasMany(proyecto)
+  mascota.belongsTo(mascota)
   proyecto.belongsTo(usuario)
-
 
 module.exports = {
     usuario,
     proyecto,
-    formaPago
-    
+    mascota
 }

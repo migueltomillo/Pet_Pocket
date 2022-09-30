@@ -1,10 +1,10 @@
 const express = require('express');
 const rutas = express.Router()
 
-const { mostrarRegistro,registro, mostrarLogin, Login, cierreSesion } = require ("../Controladores/registro.controlador")
+const { mostrarRegistro, Registro, mostrarLogin, Login, cierreSesion } = require ("../Controladores/registro.controlador")
 
 rutas.get("/registro", mostrarRegistro)
-rutas.post("/registro", registro)
+rutas.post("/registro", Registro)
 rutas.get("/login", mostrarLogin)
 rutas.post("/login", Login)
 rutas.get("/CerrarSecion", cierreSesion)

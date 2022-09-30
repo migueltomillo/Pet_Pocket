@@ -1,36 +1,32 @@
-<link rel="stylesheet" href="">
 
-<form action="/Registro" method="POST" enctype="multipart/form-data">
-  <div id="container">
-    <div id="title">
-      <p>Registro
-        {{#each maximo}}
-        <input type="text" name="idUsuarios" id="number" value="{{max}}" readonly>
-        {{/each}}
-      </p>
-    </div>
-    <div id="username">
-      <label>Nombre de usuario:</label>
-      <input type="text" id="username" name="username" required>
-    </div>
-    <div id="password">
-      <label>Contraseña:</label>
-      <input type="password" id="password" name="password" required>
-    </div>
-  
-    <div id="imagenUsuario">
-      <label>Foto:</label>
-      <div id="changeImage">
-        <img src="/img/NoImage.jpg" id="imagePreview">
-      </div>
-      <input type="file" name="imagenUsuario" id="filePicker" accept="image/*" required>
-    </div>
-    <div id="submit">
-      <div id="button">
-        <button type="submit">Guardar</button>
-      </div>
-    </div>
-  </div>
-</form>
-<script src="/js/number.js"></script>
-<script src="/js/preview.js"></script>
+ 
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="/css/registro.css" />
+ 
+<body>
+   <div class="container">
+     <div class="login-container">
+       <div class="register">
+         <h2>Registrarse</h2>
+         <form action="/registro" method="POST">
+            <input type="text" id="Nombre" name="username" placeholder="Usuario:" class="nombre">
+            <input type="password" id="Contraseña" name="password" placeholder="Contraseña:" class="password">
+           <center>
+           <input type="submit" class="submit" value="Registrarse">
+           </center>
+           <h8>¿ya tienes cuenta? <a href="http://localhost:4000/login">inicia sesion</a></h8>
+         </form>
+       </div>
+       <div class="login">
+         <h2>Iniciar Sesión</h2>
+         <div class="login-items">
+           <button class="fb"><a href="http://www.facebook.com/AQUI_TU_PAGINA" target="_blank"><img alt="Siguenos en Facebook" src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png" width=20 height=20 /></a> Acceder con Facebook</button>
+           <button class="tw"><a href="http://twitter.com/AQUI_TU_USUARIO" target="_blank"><img src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png" width=20 height=20 alt="Síguenos en Twitter" /></a> Acceder con Twitter</button>
+           <button class="correo"><a rel="author" href="https://plus.google.com/TU_ID_GOOGLE?rel=author" target="_blank"><img alt="Siguenos en Google+" src="https://lh5.googleusercontent.com/-F_FBKktZWZk/T3nN0v4FeAI/AAAAAAAAAsc/7dHTxkxn4cI/s32/google32.png" width=20 height=20  /></a> Acceder con Correo</button>
+         </div>
+       </div>
+     </div>
+   </div>
+</body>
+</html>

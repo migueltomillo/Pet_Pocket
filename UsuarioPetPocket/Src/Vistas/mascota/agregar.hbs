@@ -1,14 +1,30 @@
 <link rel="stylesheet" href="">
-<form action="/formaPago/agregar/{{user.idUsuarios}}" method="post">
+<form action="/mascota/agregar/{{user.idUsuarios}}" method="post">
     <div id="contenido">
-        <div id="titulo">Agregar Forma Pago</div>
-        <div id="Nombre">
-            <label>Nombre Forma Pago</label>
-            <input type="text" name="nombreFormaPago" required>
+        <div id="titulo">Agregar mascota</div>
+        <div id="nombre">
+            <label>Nombre de la mascota</label>
+            <input type="text" name="nombre" required>
         </div>
-        <div id="Codigo">
-            <label>Codigo Fomra Pago</label>
-            <input type="text" name="codigoFormaPagos" required>
+        <div id="raza">
+            <label>raza</label>
+            <input type="text" name="raza" required>
+        </div>
+         <div id="edad">
+            <label>Edad</label>
+            <input type="number" name="edad" required>
+        </div>
+         <div id="Peso">
+            <label>Peso</label>
+            <input type="number" name="peso" required>
+        </div>
+         <div id="descripcion">
+            <label>descripcion</label>
+            <input type="text" name="descripcion" required>
+        </div>
+         <div id="foto">
+            <label>foto</label>
+            <input type="text" name="foto" required>
         </div>
         <div id="boton">
             <button type="submit">Guardar</button>
