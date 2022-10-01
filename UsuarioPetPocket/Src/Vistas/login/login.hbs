@@ -1,24 +1,15 @@
-    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
-    <link rel="icon" href="/multimedia/Recurso 4.ico">
-    <link rel="stylesheet" href="" />
-    <body>
-<header>
-        <h1>Comunidad mas grande de los amantes de las mascotas</h1>
-    </header>
-    <form action="/login" method="POST" id="ingresar">
-    <h2>Iniciar Sesion</h2>
-        <div id="datos">
-            <input type="text" id="Nombre" name="username" placeholder="Usuario:" class="controlador">
-        </div>
-        <div id="contraseñas">
-            <input type="password" id="Contraseña" name="password" placeholder="Contraseña:" class="controlador">
-        </div>
-        <div>
-            <button type="submit" id="boton" class="boton">Ingresar</button>
-          </div>
-                <h8>¿aun no tienes una cuenta registrate? <a href="http://localhost:4000/registro">registrarse</a></h8>
+<link rel="stylesheet" href="/css/registro.css" />
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header">
+	<div>Pet Pocket <br><span><a href="http://localhost:4000/registro">Registrate</a></span></div>
+</div>
+<br> 
+<form action="/login" method="POST">
 
-    </form>
-   
-</body>
-</html>
+	<div id="login">
+            <input type="text" id="Nombre" name="username" placeholder="Usuario:" class="controlador">
+            <input type="password" id="Contraseña" name="password" placeholder="Contraseña:" class="controlador">
+		<input type="submit" value="Registrar">
+	</div>
+</form>
