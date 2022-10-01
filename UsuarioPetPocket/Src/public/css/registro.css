@@ -56,7 +56,7 @@ body{
 	color: #5379fa !important;
 }
 
-.login{
+#login{
 	position: absolute;
 	top: calc(50% - 75px);
 	left: calc(50% - 50px); 
@@ -66,7 +66,7 @@ body{
 	z-index: 2;
 }
 
-.login input[type=text]{
+#login input[type=text]{
 	width: 250px;
 	height: 30px;
 	background: transparent;
@@ -79,7 +79,7 @@ body{
 	padding: 4px;
 }
 
-.login input[type=password]{
+#login input[type=password]{
 	width: 250px;
 	height: 30px;
 	background: transparent;
@@ -93,7 +93,7 @@ body{
 	margin-top: 10px;
 }
 
-.login input[type=submit]{
+#login input[type=submit]{
 	width: 260px;
 	height: 35px;
 	background: #fff;
@@ -116,17 +116,17 @@ body{
 	opacity: 0.6;
 }
 
-.login input[type=text]:focus{
+#login input[type=text]:focus{
 	outline: none;
 	border: 1px solid rgba(255,255,255,0.9);
 }
 
-.login input[type=password]:focus{
+#login input[type=password]:focus{
 	outline: none;
 	border: 1px solid rgba(255,255,255,0.9);
 }
 
-.login input[type=submit]:focus{
+#login input[type=submit]:focus{
 	outline: none;
 }
 
