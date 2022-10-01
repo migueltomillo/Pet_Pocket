@@ -1,39 +1,19 @@
+<link rel="stylesheet" href="/css/registro.css" />
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header">
+	<div>Pet Pocket <br><span><a href="http://localhost:4000/login">Logeate</a></span></div>
+</div>
+<br> 
+<form action="/registro" method="POST">
 
- 
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
- 
-  <link rel="stylesheet" href="" />
- 
-<body>
-   <div class="container">
-     <div class="login-container">
-       <div class="register">
-        {{#each maximo}}
-         <h2>Registrarse <input type="text" name="idUsuarios" id="numero" value="{{maximo}}" readonly/h2>
-        {{/each}}
-
-         <form action="/registro" method="POST"
-         enctype="multipart/form-data">
-         
-            <input type="text" id="Nombre" name="username" placeholder="Usuario:" class="nombre">
-            <input type="password" id="Contraseña" name="password" placeholder="Contraseña:" class="password">
-               <br>
-<div id="imagen">
-            <label>Foto Usuario</label>
-            <div id="cambioImagen">
-                <img src="/img/user/NoImagen.jpg" id="imagenPrevisualizacion">
-            </div>
-            <input type="file" name="imagenUsuario" id="seleccionArchivos" accept="image/*" required>
-        </div>
-           <input type="submit" class="submit" value="Registrarse">
-                          <br>
-           <h8>¿ya tienes cuenta? <a href="http://localhost:4000/login">inicia sesion</a></h8>
-         </form>
-       </div>
-       
-     </div>
-   </div>
-</body>
-<script src="/js/numero.js"></script>
-<script src="/js/previsualizacion.js"></script>
-</html>
+	<div id="login">
+		<input type="text" placeholder="nombre" name="nombre"required><br>
+		<input type="text" placeholder="apellido" name="apellido" required><br>
+		<input type="text" placeholder="username" name="username"required><br>
+		<input type="text" placeholder="foto" name="foto"required><br>
+		<input type="text" placeholder="email" name="email"required><br>
+		<input type="password" placeholder="password" name="password"required><br>
+		<input type="submit" value="Registrar">
+	</div>
+</form>

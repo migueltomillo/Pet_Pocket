@@ -9,7 +9,8 @@ const mascotas =(sequelize, type) =>{
         raza: type.STRING(99),
         edad: type.INTEGER(99),
         peso: type.INTEGER(99),
-        decripcion: type.STRING(99),
+        descripcion: type.STRING(99),
+        foto: type.STRING,
 
         creacionMascotas:{
             type: 'TIMESTAMP',
