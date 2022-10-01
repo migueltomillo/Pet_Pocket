@@ -4,7 +4,7 @@
     box-sizing: border-box; /*Sirve para separar el texto de los bordes*/
 }
 
-.container{
+#container{
     width: 349px;
     background-color: #ffcb42;
     display: flex;
