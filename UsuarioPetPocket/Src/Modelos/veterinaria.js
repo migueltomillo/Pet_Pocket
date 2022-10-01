@@ -5,7 +5,14 @@ const veterinarias =(sequelize, type) =>{
             primaryKey: true,
             autoIncrement: true,
         },
-        nombre: type.STRING(99),
+/* nombre: type.STRING(99), */        
+
+        nombre: 
+        {type: type.STRING(99),},
+        
+
+
+
         sector: type.STRING(99),
         telefono: type.INTEGER(10),
         calle: type.INTEGER(10),

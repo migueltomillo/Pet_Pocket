@@ -9,6 +9,7 @@ veterinariaCtl.mostrar = (req, res) => {
 }
 veterinariaCtl.mandar = async (req, res) => {
    /*  const id = req.user.idUsuarios */
+    const id = req.user.veterinarias
     const {nombre, sector, calle, telefono, especialidad} = req.body
     const nuevo = {
         nombre,
@@ -19,7 +20,7 @@ veterinariaCtl.mandar = async (req, res) => {
     }
     await orm.veterinarias.create(nuevo)
     req.flash('success', 'Guardado con exito')
-    res.redirect('/veterinaria/lista/' /*+ id */);
+    res.redirect('/veterinaria/lista/' /* + id */ );
 }
 veterinariaCtl.lista = async (req, res) => {
     const lista = await sql.query("select * from veterinarias")
@@ -47,7 +48,7 @@ veterinariaCtl.actualizar = async (req, res) => {
         .then(actualizar => {
             actualizar.update(nuevo)
             req.flash('success', 'Actualizacion exitosa')
-            res.redirect('/veterinaria/lista/' /*+ id*/);
+            res.redirect('/veterinaria/lista/' + id);
         })
 }
 
