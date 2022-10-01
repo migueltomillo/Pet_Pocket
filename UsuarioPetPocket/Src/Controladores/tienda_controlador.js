@@ -8,7 +8,7 @@ tiendaCTl.mostrar = (req, res) => {
 }
 
 tiendaCTl.mandar = async (req, res) => {
-    const id = req.user.idUsuario
+    // const id = req.user.idUsuario
     const { fotoTienda, categoriaTienda, descripccionTienda, tituloTienda } = req.body
     const nuevoTienda = {
         fotoTienda,
@@ -16,20 +16,20 @@ tiendaCTl.mandar = async (req, res) => {
         descripccionTienda,
         tituloTienda,
     }
-    await orm.tiendas.create(nuevoTienda)
+    await orm.tienda.create(nuevoTienda)
     req.flash('success', 'Guardado con exito')
-    res.redirect('/tienda/lista/' + id);
+    res.redirect('/tienda/lista/' /*+ id*/);
 }
 
 tiendaCTl.lista = async (req, res) => {
     const lista = await sql.query('select * from tiendas')
-    res.render('tiendas/lista', { lista })
+    res.render('tienda/lista', { lista })
 }
 
 tiendaCTl.traer = async (req, res) => {
     const ids = req.params.id
-    const lista = await sql.query('select * from tiendas where idPerdido = ?', [ids])
-    res.render('/tienda/editar/', { lista })
+    const lista = await sql.query('select * from tiendas where idtienda = ?', [ids])
+    res.render('tienda/editar', { lista })
 }
 
 tiendaCTl.actualizar = async (req, res) => {
@@ -42,7 +42,7 @@ tiendaCTl.actualizar = async (req, res) => {
         descripccionTienda,
         tituloTienda,
     }
-    await orm.perdido.findOne({ where: { idtienda: ids } })
+    await orm.tienda.findOne({ where: { idtienda: ids } })
         .then(actualizar => {
             actualizar.update(nuevoProducto)
             req.flash('success', 'Actuaizado con exito')
@@ -52,8 +52,8 @@ tiendaCTl.actualizar = async (req, res) => {
 
 tiendaCTl.eliminar = async (req, res) => {
     const ids = req.params.id
-    const id = req.user.idUsuario
-    await orm.perdido.destroy({ where: { idPerdido: ids } })
+    // const id = req.user.idUsuario
+    await orm.tienda.destroy({ where: { idtienda: ids } })
         .then(() => {
             req.flash('success', 'Actuaizado con exito')
             res.redirect('/tienda/lista/' /*+ id*/);

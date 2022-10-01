@@ -2,7 +2,7 @@ const express = require('express');
 const rutas = express.Router()
 
 const { mostrar, mandar, lista, traer, actualizar, eliminar }= require('../controladores/tienda_controlador')
-const { isLoggedIn } = require('../lib/auth')
+// const { isLoggedIn } = require('../lib/auth')
 
 rutas.get('/agregar/:id',  mostrar)
 rutas.post('/agregar/',  mandar)
