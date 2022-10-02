@@ -16,7 +16,7 @@ preguntasCtrl.mandar= async(req,res)=>{
         horaPregunta,
     }
     await orm.preguntas.create(nuevoEnvio)
-    req.flash('succes','Guardado con exito')
+    req.flash('success','Guardado con exito')
     res.redirect('/preguntas/preguntasLi/'+id)
 }
 
@@ -42,20 +42,21 @@ preguntasCtrl.actualizar = async(req,res)=>{
         fechaPregunta,
         horaPregunta,
     }
-    await orm.preguntas.finOne({where: { idAyudaPet: ids }})
+    await orm.preguntas.findOne({where: { idAyudaPet: ids }})
     .then(actualizar=>{
         actualizar.update(nuevoEnvio)
-        req.flash('succes','Actualizado con exito')
+        req.flash('success','Actualizado con exito')
         res.redirect('/preguntas/preguntasLi/'+id)
     })
     
 }
 preguntasCtrl.eliminar = async (req,res)=>{
-    const ids = req.params.id
-    await orm.preguntas.destroy({where: { idAyudaPet: ids }})
+    const ids = req.user.idUsuarios
+    const id = req.params.id
+    await orm.preguntas.destroy({where: { idAyudaPet: id }})
     .then(()=>{
-        req.flash('succes','Actualizado con exito')
-        res.redirect('/preguntas/preguntasLi/')
+        req.flash('success','Actualizado con exito')
+        res.redirect('/preguntas/preguntasLi/' + ids)
     })
     
 }

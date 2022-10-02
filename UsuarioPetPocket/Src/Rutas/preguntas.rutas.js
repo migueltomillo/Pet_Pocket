@@ -8,8 +8,7 @@ rutas.get('/preguntas/:id',isLoggedIn,mostrar)
 rutas.post('/preguntas/:id',isLoggedIn,mandar)
 rutas.get('/preguntasLi/:id',isLoggedIn,lista)
 rutas.get('/preguntasEd/:id',isLoggedIn,traer)
-rutas.get('/preguntasEd/:id',isLoggedIn,actualizar)
-rutas.get('/preguntasEd/:id',isLoggedIn,actualizar)
-rutas.get('/preguntasEl/:id',isLoggedIn,eliminar)
+rutas.post('/preguntasEd/:id',isLoggedIn,actualizar)
+rutas.get('/Eliminar/:id',isLoggedIn,eliminar)
 
 module.exports=rutas
