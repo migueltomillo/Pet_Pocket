@@ -68,6 +68,8 @@ app.use("/perdido",require ('./Rutas/perdido.rutas'))
 app.use('/bells', require('./Rutas/bells.rutas'))
 //Preguntas sobre mascotas
 app.use('/preguntas',require('./Rutas/preguntas.rutas'))
+//tienda de mascotas
+app.use("/tienda",require('./Rutas/tienda.rutas'))
 
 app.use(require("./Rutas/index.rutas"))
 app.use(require("./Rutas/registro.rutas"))

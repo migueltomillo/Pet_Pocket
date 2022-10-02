@@ -19,6 +19,8 @@ const proyectoModelo = require('../Modelos/proyecto')
 const perdidoModelo = require('../Modelos/perdidos')
 const bellsModelo = require('../Modelos/bells')
 const preguntasModelo = require('../Modelos/preguntas')
+const tiendaModelo = require('../Modelos/tienda')
+const productoModelo = require('../Modelos/producto')
 
 const sequelize = new Sequelize(
   'PetPocket',
@@ -54,6 +56,8 @@ sequelize.sync({ force: false })
   const perdido = perdidoModelo(sequelize, Sequelize)
   const bells = bellsModelo(sequelize, Sequelize)
   const preguntas =preguntasModelo(sequelize,Sequelize)
+  const tienda = tiendaModelo(sequelize, Sequelize);
+  const producto = productoModelo(sequelize, Sequelize);
 
   usuario.hasMany(proyecto)
   mascota.belongsTo(mascota)
@@ -61,6 +65,9 @@ sequelize.sync({ force: false })
   perdido.belongsTo(perdido)
   bells.belongsTo(usuario)
   preguntas.belongsTo(usuario)
+  tienda.belongsTo(usuario)
+  tienda.hasMany(producto)
+  producto.belongsTo(tienda)
 
 module.exports = {
     usuario,
@@ -68,5 +75,7 @@ module.exports = {
     mascota,
     perdido,
     bells,
-    preguntas
+    preguntas,
+    tienda,
+    producto
 }
