@@ -1,19 +1,21 @@
-const perdidos =(sequelize, type) =>{
-    return sequelize.define('perdidos', {
-        idPerdidos: {
+const perdido = (sequelize, type) =>{
+    return sequelize.define('perdido', {
+        idPerdido: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        titulo: type.STRING(99),
-        descripcion: type.STRING(99),
+        ImagenPerdido: type.STRING,
+        FechaPerdido: type.STRING,
+        DescripcionPerdido: type.STRING,
+        TelefonoPerdido: type.STRING,
 
-        creacionPerdidos:{
+        creacionPerdido:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionPerdidos:{
+        actualizacionPerdido:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -23,4 +25,4 @@ const perdidos =(sequelize, type) =>{
     })
 }
 
-module.exports = perdidos
+module.exports = perdido

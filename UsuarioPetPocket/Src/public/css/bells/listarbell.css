@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Sirve para separar el texto de los bordes*/
+}
+
+#tarjeta{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: rgba(76, 90, 217, 0.56);
+    border: 5px solid #ffcb42;
+    margin-left: 8vw;
+    margin-right: 3vw;
+    margin-top: 5vh;
+    border-radius: 15px;
+    text-align: center;
+}
+
+ button{
+    background-color: #277bc0;
+    border: solid 1px rgb(31, 28, 28);
+    padding: 2px;
+    width: 130px;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 20px;
+    text-align: center;
+ }
+ 
+ p{
+    font-size: 20px;
+    text-align: center;
+ }

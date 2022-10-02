@@ -25,27 +25,28 @@ nav{
     transition: all 0.5s ease;
     border-bottom: 4px solid yellow;
 }
-.logo{
+#logo{
     top: left;
     width: 200px;
 }
+
 /*Aqui vas las letras de las opciones */
-.menu{
+/*#menu{
     display: flex;
     font-size: 20px;
     
 }
-.menu li{
+#menu li{
     list-style: none;
     margin: 10px;
 }
-.menu li a{
+#menu li a{
     color: blue;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.5s ease;
 }
-.menu li a:hover{
+#menu li a:hover{
     padding: 5px 10px;
     background: rgb(251, 255, 5);
     color: black;
@@ -61,7 +62,7 @@ nav{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: large;
 }
-.container{
+#container{
     width: 90%;
     max-width: 1000px;
     margin: 1.6em auto;
@@ -69,11 +70,12 @@ nav{
     gap: 1.6em;
     grid-template-columns: repeat(5, 1fr);
 }
-.container > .content,
-.container > .sidebar,
-.container > div{
+#container > #content,
+#container > #sidebar,
+#container > div{
     padding: 20px;
 }
+/*
 #barra{
     width: 300px;
     float:right;
@@ -85,24 +87,25 @@ nav{
     clear: both;
     font-style: oblique;
     font-size:medium;
-}
-.container > .content{
+}*/
+
+#container > #content{
     grid-column: span 3;
 }
-.content > .article{
+#content > #article{
     padding: 20px;
     margin-top: 5px;
     color: black;
 }
-.content .article h1,
-.content .article p{
+#content #article h1,
+#content #article p{
     padding: 10px;
 }
-.column{
+#column{
     flex: 25%;
     padding: 5px;
 }
-.column img{
+#column img{
     margin-top: 5px; 
     
 }
@@ -115,7 +118,7 @@ nav{
     font-size: larger;
     font-family: 'Times New Roman', Times, serif;
 }
-.container > .sidebar{
+#container > #sidebar{
     /*border: 1px solid  black;*/
     grid-column:span 2;
     color: black;
@@ -123,11 +126,11 @@ nav{
     align-items:center;
     flex-direction:column;
 }
-.container .sidebar img{
+#container #sidebar img{
     width: 150px;
     margin-top: 5px;
 }
-.container > .related-post{
+#container > #related-post{
     background: #1e272e;
     color: #ffffff;
     height: 180px;
@@ -136,7 +139,7 @@ nav{
     justify-content: center;
     transition: all 0.5s ease;
 }
-.container > .related-post:hover{
+#container > #related-post:hover{
     cursor: pointer;
     color: #000000;
     background: #ffffff

@@ -1,9 +1,13 @@
-    <LINK REL="stylesheet" HREF="/css/mascotas/registro.css" TYPE="text/css" MEDIA=screen>
-      <link rel="stylesheet" href="/css/navegador.css" />
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/navegador.css" />
+    <link rel="stylesheet" href="/css/bells/listarbell.css" />
+    <link rel="icon" href="/multimedia/Recurso 4.ico">
 
 <body
     background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
-   <header>
+    <header>
         <nav id="nav">
 
             <!--Aqui va el nombre-->
@@ -30,62 +34,54 @@ Es un ejemplo para llamar a lo que deseen
             </ul>
         </nav>
     </header>
-    <!--Aqui se acaba el nav-->
-    <div id="titulo">
-        <p>Mascotas perdidas</p>
+     <b><h1 id="titulo" align="center">Campañas</h1></b>
+    <u><b><h2 id="subtitulo1" align="center">Un lugar donde amamos a los animales.</h2></b></u>
+    
+    <!--inicio del crud-->
+<form action="/bells/listar/{{user.idUsuarios}}" method="get">
+<div id="contenedor">
+    <div class="row">
+        {{#each lista}}
+        <div id="tarjeta">
+            <div id="idbells">
+                <p>{{idbell}}</p>
+            </div>
+            <div id="Titulo">
+                <p>{{titulo}}</p>
+            </div>
+            <div id="Descripcion">
+                <p>{{descripcion}}</p>
+            </div>
+            <div id="Imagenbells">
+                <p>{{imagenbells}}</p>
+            </div>
+            <div id="boton">
+                <div id="editar">
+                    <a href="/bells/editar/{{idbell}}"><button type="button">Editar</button></a>
+                </div>
+                <div id="eliminar">
+                    <a href="/bells/eliminar/{{idbell}}"><button type="button">Eliminar</button></a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
     </div>
-    <div>
-        <form action="/mascota/agregar/{{user.idUsuarios}}" method="post"id="contenedor">
-    <div id="contenido">
-        <div id="nombre">
-            <label>Nombre de la mascota</label>
-            <input type="text" name="nombre" required>
-        </div>
-        <div id="raza">
-            <label>raza</label>
-            <input type="text" name="raza" required>
-        </div>
-         <div id="edad">
-            <label>Edad</label>
-            <input type="number" name="edad" required>
-        </div>
-         <div id="Peso">
-            <label>Peso</label>
-            <input type="number" name="peso" required>
-        </div>
-         <div id="descripcion">
-            <label>descripcion</label>
-            <input type="text" name="descripcion" required>
-        </div>
-         <div id="foto">
-            <label>foto</label>
-            <input type="text" name="foto" required>
-        </div>
-        <div id="boton">
-            <button type="submit">Guardar</button>
-        </div>
-    </div>
-    </div>
-    <br><br>
+</div>
+</form>
 
-    <!--Aqui empieza el foter-->
-          <footer id="pie">
+<!--fin del crud-->
+                <br></br>
+                <footer id="pie">
                     <h4>Siguenos en nuestras redes </h4>
                         <a href="http://twitter.com/AQUI_TU_USUARIO" target="_blank"><img src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png" width=32 height=32 alt="Síguenos en Twitter"/></a>
                         <a rel="author" href="https://plus.google.com/TU_ID_GOOGLE?rel=author" target="_blank"><img alt="Siguenos en Google+" src="https://lh5.googleusercontent.com/-F_FBKktZWZk/T3nN0v4FeAI/AAAAAAAAAsc/7dHTxkxn4cI/s32/google32.png" width=32 height=32 /></a>
                          <a href="http://www.facebook.com/AQUI_TU_PAGINA" target="_blank"><img alt="Siguenos en Facebook" src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png" width=32 height=32 /></a>
                     <aside id="barra">
                         <input id="input" type="text" placeholder="petPocket@yavirac.ec">
-                        <button>Subscribirse</button>
+                        <button type="submit">Subscribirse</button>
                     </aside>
-                </footer>     
-
-
+                </footer>
+    </b>
 </body>
 
 </html>
-
-
-
-
-

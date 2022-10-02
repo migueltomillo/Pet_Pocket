@@ -1,0 +1,39 @@
+#tarjeta{
+    background-color: #ffcb42;
+    width: 260px;
+    margin-left: 500px;
+    border: solid 3px #277bc0;
+    padding: 20px;
+    margin-top: 60px;  
+    display:inline-table;
+}
+
+#stitulo{
+    font-size: 30px;
+    font-family: cursive;
+    text-align: center;
+ }
+#b1{
+    background-color: #277bc0;
+    color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    border: solid 1px black;
+    margin-left: 80px;
+    margin-top: 10px;
+    display: inline-block;
+ }
+ #b2{
+    background-color: #277bc0;
+    color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    border: solid 1px black;
+     margin-left: 75px;
+    display: inline-block;
+    margin-top: 10px;
+ }
+ p{
+    font-size: 20px;
+    text-align: center;
+ }

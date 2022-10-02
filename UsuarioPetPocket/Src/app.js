@@ -59,7 +59,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //routers
+
+//Mascotas registros
 app.use("/mascota",require ('./Rutas/mascota.rutas'))
+//Mascotas perdidos
+app.use("/perdido",require ('./Rutas/perdido.rutas'))
+//Campañas mascotas
+app.use('/bells', require('./Rutas/bells.rutas'))
 
 app.use(require("./Rutas/index.rutas"))
 app.use(require("./Rutas/registro.rutas"))

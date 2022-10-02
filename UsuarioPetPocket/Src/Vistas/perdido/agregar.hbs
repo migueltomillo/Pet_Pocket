@@ -1,9 +1,20 @@
-    <LINK REL="stylesheet" HREF="/css/mascotas/registro.css" TYPE="text/css" MEDIA=screen>
-      <link rel="stylesheet" href="/css/navegador.css" />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK REL=StyleSheet HREF="/css/perdidos/agregar.css" TYPE="text/css" MEDIA=screen>
+    <link rel="stylesheet" href="/css/paginaPrincipalCompleta.css" />
+          <link rel="stylesheet" href="/css/navegador.css" />
+    <title>PERDIDOS</title>
+</head>
+
 
 <body
     background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
-   <header>
+    <header>
         <nav id="nav">
 
             <!--Aqui va el nombre-->
@@ -19,14 +30,13 @@ Es un ejemplo para llamar a lo que deseen
                 <li><a href="#">Red social</a></li>
                 <li><a href="#">Perdidos</a></li>
                 <li><a href="#">Adopcion</a></li>
-                <li><a href="http://localhost:4000/bells/agregar">Campañas</a></li>
+                <li><a href="http://localhost:4000/campañas">Campañas</a></li>
                 <li><a href="#">Reporte</a></li>
                 <li><a href="#">Ayuda</a></li>
                 <li><a href="#">Donaciones</a></li>
                 <li><a href="#">Tienda</a></li>
-                <li><a href="http://localhost:4000/login">cerrar sesion</a></li>
-                
-                <!--Aqui se acaba-->
+                <li><a href="http://localhost:4000/login">cerrar sesion</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -35,36 +45,38 @@ Es un ejemplo para llamar a lo que deseen
         <p>Mascotas perdidas</p>
     </div>
     <div>
-        <form action="/mascota/agregar/{{user.idUsuarios}}" method="post"id="contenedor">
-    <div id="contenido">
-        <div id="nombre">
-            <label>Nombre de la mascota</label>
-            <input type="text" name="nombre" required>
-        </div>
-        <div id="raza">
-            <label>raza</label>
-            <input type="text" name="raza" required>
-        </div>
-         <div id="edad">
-            <label>Edad</label>
-            <input type="number" name="edad" required>
-        </div>
-         <div id="Peso">
-            <label>Peso</label>
-            <input type="number" name="peso" required>
-        </div>
-         <div id="descripcion">
-            <label>descripcion</label>
-            <input type="text" name="descripcion" required>
-        </div>
-         <div id="foto">
-            <label>foto</label>
-            <input type="text" name="foto" required>
-        </div>
-        <div id="boton">
-            <button type="submit">Guardar</button>
-        </div>
-    </div>
+        <form action="/perdido/agregar/{{user.idUsuarios}}" method="post" id="contenedor">
+
+            <div id="stitulo">
+                <p> <strong>AYUDANOS A <BR> ENCONTRARLO</strong></p>
+            </div>
+
+            <div id="ImagenPerdido">
+                <label id="subtitulo">Imagen Perdido:</label>
+                <input type="text" name="ImagenPerdido" required placeholder="Imagen perdido">
+            </div>
+            <div id="FechaPerdido">
+                <label id="subtitulo">Tiempo Perdido:</label>
+                <select name="FechaPerdido">
+                    <option>Hace 1 día</option>
+                    <option>Hace 2 día</option>
+                    <option>Hace 1 semana</option>
+                    <option>Hace 1-2 semana</option>
+                    <option>Más de un mes</option>
+                </select>
+            </div>
+            <div id="DescripcionPerdido">
+                <label id="subtitulo">Descripcion perdido:</label>
+                <input type="text" name="DescripcionPerdido" required placeholder="Descripción Perdido">
+            </div>
+            <div id="TelefonoPerdido">
+                <label id="subtitulo">Teléfono perdido:</label>
+                <input type="text" name="TelefonoPerdido" required placeholder="Teléfono Perdido">
+            </div>
+            <div id="boton">
+                <button type="submit">SUBIR</button>
+            </div>
+        </form>
     </div>
     <br><br>
 
@@ -84,8 +96,3 @@ Es un ejemplo para llamar a lo que deseen
 </body>
 
 </html>
-
-
-
-
-

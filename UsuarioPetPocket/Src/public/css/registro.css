@@ -11,7 +11,7 @@ body{
 	font-size: 12px;
 }
 
-.body{
+#body{
 	position: absolute;
 	top: -20px;
 	left: -20px;
@@ -22,7 +22,7 @@ body{
 	background-size: cover;
 }
 
-.grad{
+#grad{
 	position: absolute;
 	top: -20px;
 	left: -20px;
@@ -35,14 +35,14 @@ body{
 	opacity: 0.7;
 }
 
-.header{
+#header{
 	position: absolute;
 	top: calc(50% - 35px);
 	left: calc(50% - 255px);
 	z-index: 2;
 }
 
-.header div{
+#header div{
 	float: left;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
@@ -50,7 +50,7 @@ body{
 	font-weight: 200;
 }
 
-.header div span{
+#header div span{
 	color: #5379fa !important;
 }
 

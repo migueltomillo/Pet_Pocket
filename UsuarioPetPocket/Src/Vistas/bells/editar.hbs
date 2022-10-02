@@ -1,9 +1,13 @@
-    <LINK REL="stylesheet" HREF="/css/mascotas/registro.css" TYPE="text/css" MEDIA=screen>
-      <link rel="stylesheet" href="/css/navegador.css" />
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/navegador.css" />
+    <link rel="stylesheet" href="/css/bells/editarbell.css" />
+    <link rel="icon" href="/multimedia/Recurso 4.ico">
 
 <body
     background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
-   <header>
+    <header>
         <nav id="nav">
 
             <!--Aqui va el nombre-->
@@ -30,62 +34,49 @@ Es un ejemplo para llamar a lo que deseen
             </ul>
         </nav>
     </header>
-    <!--Aqui se acaba el nav-->
-    <div id="titulo">
-        <p>Mascotas perdidas</p>
-    </div>
-    <div>
-        <form action="/mascota/agregar/{{user.idUsuarios}}" method="post"id="contenedor">
-    <div id="contenido">
-        <div id="nombre">
-            <label>Nombre de la mascota</label>
-            <input type="text" name="nombre" required>
+     <b><h1 id="titulo" align="center">Campañas</h1></b>
+    <u><b><h2 id="subtitulo1" align="center">Un lugar donde amamos a los animales.</h2></b></u>
+    
+    <!--inicio del crud-->
+    {{#each lista}}
+    <form action="/bells/editar/{{idbell}}" method="post">
+    
+    <div id="container">
+        <div id="titulo">
+            <p>Agregar Campaña</p>
         </div>
-        <div id="raza">
-            <label>raza</label>
-            <input type="text" name="raza" required>
+        <div id="Titulo">
+            <label>Titulo de la Campaña:</label>
+            <input type="text" name="titulo" value="{{titulo}}" required>
         </div>
-         <div id="edad">
-            <label>Edad</label>
-            <input type="number" name="edad" required>
+        <div id="Descripcion">
+            <label>Descripcion de la Campaña:</label>
+            <input type="text" name="descripcion" value="{{descripcion}}" required>
         </div>
-         <div id="Peso">
-            <label>Peso</label>
-            <input type="number" name="peso" required>
-        </div>
-         <div id="descripcion">
-            <label>descripcion</label>
-            <input type="text" name="descripcion" required>
-        </div>
-         <div id="foto">
-            <label>foto</label>
-            <input type="text" name="foto" required>
+        <div id="Imagenbells">
+            <label>Imagen de la Campaña:</label>
+            <input type="text" name="imagenbells" value="{{imagenbells}}" required>
         </div>
         <div id="boton">
-            <button type="submit">Guardar</button>
+            <button type="submit">Actualizar</button>
         </div>
     </div>
-    </div>
-    <br><br>
-
-    <!--Aqui empieza el foter-->
-          <footer id="pie">
+    </form>
+    {{/each}}
+    
+    <!--fin del crud-->
+                <br></br>
+                <footer id="pie">
                     <h4>Siguenos en nuestras redes </h4>
                         <a href="http://twitter.com/AQUI_TU_USUARIO" target="_blank"><img src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png" width=32 height=32 alt="Síguenos en Twitter"/></a>
                         <a rel="author" href="https://plus.google.com/TU_ID_GOOGLE?rel=author" target="_blank"><img alt="Siguenos en Google+" src="https://lh5.googleusercontent.com/-F_FBKktZWZk/T3nN0v4FeAI/AAAAAAAAAsc/7dHTxkxn4cI/s32/google32.png" width=32 height=32 /></a>
                          <a href="http://www.facebook.com/AQUI_TU_PAGINA" target="_blank"><img alt="Siguenos en Facebook" src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png" width=32 height=32 /></a>
                     <aside id="barra">
                         <input id="input" type="text" placeholder="petPocket@yavirac.ec">
-                        <button>Subscribirse</button>
+                        <button type="submit">Subscribirse</button>
                     </aside>
-                </footer>     
-
-
+                </footer>
+    </b>
 </body>
 
 </html>
-
-
-
-
-
