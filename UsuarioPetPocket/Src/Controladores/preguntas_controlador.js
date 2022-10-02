@@ -42,7 +42,7 @@ preguntasCtrl.actualizar = async(req,res)=>{
         fechaPregunta,
         horaPregunta,
     }
-    await orm.preguntas.finOne({where: {idAyudaPet: ids}})
+    await orm.preguntas.finOne({where: { idAyudaPet: ids }})
     .then(actualizar=>{
         actualizar.update(nuevoEnvio)
         req.flash('succes','Actualizado con exito')
@@ -52,7 +52,7 @@ preguntasCtrl.actualizar = async(req,res)=>{
 }
 preguntasCtrl.eliminar = async (req,res)=>{
     const ids = req.params.id
-    await orm.preguntas.destroy({where: {idAyudaPet: ids}})
+    await orm.preguntas.destroy({where: { idAyudaPet: ids }})
     .then(()=>{
         req.flash('succes','Actualizado con exito')
         res.redirect('/preguntas/preguntasLi/')
