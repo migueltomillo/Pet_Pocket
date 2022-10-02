@@ -16,6 +16,12 @@ mysql.createConnection({
 
 const usuarioModelo = require('../Modelos/usuario')
 const proyectoModelo = require('../Modelos/proyecto')
+const commentModelo = require('../Modelos/comment')
+const denunciaModelo = require('../Modelos/denuncia')
+const denunciadoModelo = require('../Modelos/denunciado')
+const publicationModelo = require('../Modelos/publication')
+const reactionModelo = require('../Modelos/reaction')
+
 
 
 const sequelize = new Sequelize(
@@ -49,6 +55,11 @@ sequelize.sync({ force: false })
 
   const usuario = usuarioModelo(sequelize, Sequelize)
   const proyecto = proyectoModelo(sequelize, Sequelize)
+  const comment = commentModelo(sequelize, Sequelize)
+  const denuncia = denunciaModelo(sequelize, Sequelize)
+  const denunciado = denunciadoModelo(sequelize, Sequelize)
+  const publication = publicationModelo(sequelize, Sequelize)
+  const reaction = reactionModelo(sequelize, Sequelize)
 
 
   usuario.hasMany(proyecto)
@@ -57,6 +68,11 @@ sequelize.sync({ force: false })
 
 module.exports = {
     usuario,
-    proyecto
+    proyecto,
+    comment,
+    denuncia,
+    denunciado,
+    publication,
+    reaction
     
 }
