@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="/css/preguntas/preguntas.css">
+<link rel="stylesheet" href="/css/paginaPrincipalCompleta.css" />
+          <link rel="stylesheet" href="/css/navegador.css" />
+<body
+    background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
+    <header>
+        <nav id="nav">
+
+            <!--Aqui va el nombre-->
+            <img id="logo" src="/multimedia/logo-removebg-preview.png">
+            <!--Aqui se acaba-->
+
+            <ul id="menu">
+
+                <!--Aqui va las opciones para la barra de busqueda
+                <li><a href="http://localhost:4000/registro_carnet">Agregar carnet</a></li>
+Es un ejemplo para llamar a lo que deseen
+                -->
+                <li><a href="#">Red social</a></li>
+                <li><a href="#">Perdidos</a></li>
+                <li><a href="#">Adopcion</a></li>
+                <li><a href="http://localhost:4000/campañas">Campañas</a></li>
+                <li><a href="#">Reporte</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Donaciones</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="http://localhost:4000/login">cerrar sesion</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--Aqui se acaba el nav-->
+    <h1>Ayuda Pet Pocket</h1>
+    <div id="contenedorP">
+    <div id="titulo">
+            <p id="info">Este espacio esta dedicado para todas las personas que tengan alguna duda sobre sus mascotas</p>
+    </div>
+
+    <form action="/preguntas/preguntas/{{user.idUsuarios}}" method="post"> {{!-aqui puede haber un error por el usuario}}
+        
+        
+            
+        <input type="text" name="tituloPregunta" required placeholder="Cual es tu pregunta" id="preguntar">
+        
+        
+        <input type="text" name="descripcionPregunta" required placeholder="Detalles de tu pregunta" id="Detalles">
+        
+        <div id="tiempoPregunta">
+            
+            <input type="date" name="fechaPregunta" required id="fePregunta">
+        
+        
+            <input type="time" name="horaPregunta" required id="hoPregunta">
+
+        </div>
+        
+        
+        
+        <button type="submit" id="boton">Publicar</button>
+        
+    </form>
+   </div>
+   

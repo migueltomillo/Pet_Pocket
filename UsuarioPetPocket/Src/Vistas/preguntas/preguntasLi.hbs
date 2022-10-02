@@ -1,8 +1,5 @@
-<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/preguntas/preguntasLi.css">
     <link rel="stylesheet" href="/css/navegador.css" />
-    <link rel="stylesheet" href="/css/bells/editarbell.css" />
     <link rel="icon" href="/multimedia/Recurso 4.ico">
 
 <body
@@ -31,37 +28,30 @@
             </ul>
         </nav>
     </header>
-    <form action="/mascota/lista/{{user.idUsuarios}}" method="get"></form>
-<div id="contenido">
-    <div class="raw">
+<form action="/preguntas/preguntasLi/{{user.idUsuarios}}" method="get"></form>
+<div id="contenedor">
+    <h1 class="tusPreg">Tus Preguntas</h1>
+    <div class="contenedorTar">
         {{#each lista}}
         <div id="tarjeta">
-            <div id="titulo">
-                <p>{{nombre}}</p>
+            <div id="idPregunta">
+                <p>{{tituloPregunta}}</p>
             </div>
-            <div id="codigo">
-                <p>{{raza}}</p>
+            <div id="desPregunta">
+                <p>{{descripcionPregunta}}</p>
             </div>
-             <div id="codigo">
-                <p>{{edad}}</p>
+            <div id="preguntaFe">
+                <p>{{fechaPregunta}}</p>
             </div>
-             <div id="codigo">
-                <p>{{peso}}</p>
+            <div id="preguntaHo">
+                <p>{{horaPregunta}}</p>
             </div>
-             <div id="codigo">
-                <p>{{descripcion}}</p>
-            </div>
-             <div id="codigo">
-                <p>{{foto}}</p>
-            </div>
-            <div id="editar">
-                <div id="boton">
-                    <a href="/mascota/editar/{{idMascotas}}"><button type="button">Editar</button></a>
+            <div id="boton">
+                <div id="Editar">
+                    <a href="/preguntas/preguntasEd/{{idAyudaPet}}"><button>Editar</button></a>
                 </div>
-            </div>
-            <div id="editar">
-                <div id="boton">
-                    <a href="/mascota/eliminar/{{idMascotas}}"><button type="button">Eliminar</button></a>
+                <div id="Eliminar">
+                    <a href="/preguntas/preguntasEl/{{idAyudaPet}}"><button>Eliminar</button></a>
                 </div>
             </div>
         </div>
