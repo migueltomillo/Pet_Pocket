@@ -3,14 +3,16 @@
     padding: 0;
     box-sizing: border-box; /*Sirve para separar el texto de los bordes*/
 }
-#contenedor{
-    background-color: #ffcb42;
-    width: 260px;
-    height:max-content;
-    margin-left: 500px;
-    border: solid 3px #277bc0;
-    padding: 20px;
-    margin-top: 60px;  
+
+#tarjeta{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: rgba(76, 90, 217, 0.56);
+    border: 5px solid #ffcb42;
+    margin-left: 8vw;
+    margin-right: 3vw;
+    margin-top: 5vh;
+    border-radius: 15px;
     text-align: center;
 }
 

@@ -6,7 +6,7 @@ const { isLoggedIn } = require('../lib/auth')
 
 
 router.get('/agregar/:id', mostrar)
-router.post('/agregar/:id' , mandar)
+router.post('/agregar/' , mandar)
 router.get('/listar/:id', lista)
 router.get('/editar/:id', traer)
 router.post('/listar/:id', actualizar)

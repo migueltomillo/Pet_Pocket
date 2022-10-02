@@ -1,20 +1,20 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/paginaPrincipalCompleta.css" />
+    <link rel="stylesheet" href="/css/navegador.css" />
     <link rel="stylesheet" href="/css/editarbell.css" />
     <link rel="icon" href="/multimedia/Recurso 4.ico">
 
 <body
     background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
     <header>
-        <nav class="nav">
+        <nav id="nav">
 
             <!--Aqui va el nombre-->
-            <img class="logo" src="/multimedia/logo-removebg-preview.png">
+            <img id="logo" src="/multimedia/logo-removebg-preview.png">
             <!--Aqui se acaba-->
 
-            <ul class="menu">
+            <ul id="menu">
 
                 <!--Aqui va las opciones para la barra de busqueda
                 <li><a href="http://localhost:4000/registro_carnet">Agregar carnet</a></li>
@@ -28,15 +28,12 @@ Es un ejemplo para llamar a lo que deseen
                 <li><a href="#">Ayuda</a></li>
                 <li><a href="#">Donaciones</a></li>
                 <li><a href="#">Tienda</a></li>
-                <li><a href="http://localhost:4000/login">cerrar sesion</a>
-                </li>
+                <li><a href="http://localhost:4000/login">cerrar sesion</a></li>
                 
                 <!--Aqui se acaba-->
             </ul>
         </nav>
     </header>
-   
-    <br></br>
      <b><h1 id="titulo" align="center">Campañas</h1></b>
     <u><b><h2 id="subtitulo1" align="center">Un lugar donde amamos a los animales.</h2></b></u>
     
@@ -71,25 +68,13 @@ Es un ejemplo para llamar a lo que deseen
                 <br></br>
                 <footer id="pie">
                     <h4>Siguenos en nuestras redes </h4>
-                    <aside id="barra">
-                        <input type="text" placeholder="petPocket@yavirac.ec">
-                        <input type="button" value="subscribe">
-                        
-                    </aside>
-                    <table class="default" id="tabla">
-                        <tr>
-                            <th colspan="2"><a href="#"><li class="nav-item">Tienda</li></a></th>
-                            <th colspan="2"><a href="#"><li class="nav-item">Adopcion</li></a></th>
-                        </tr>
-                        <tr>
-                            <th colspan="2"><a href="#"><li class="nav-item">Ajustes</li></a></th>
-                            <th colspan="2"><a href="#"><li class="nav-item">Busqueda</li></a></th>
-                        </tr>
                         <a href="http://twitter.com/AQUI_TU_USUARIO" target="_blank"><img src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png" width=32 height=32 alt="Síguenos en Twitter"/></a>
                         <a rel="author" href="https://plus.google.com/TU_ID_GOOGLE?rel=author" target="_blank"><img alt="Siguenos en Google+" src="https://lh5.googleusercontent.com/-F_FBKktZWZk/T3nN0v4FeAI/AAAAAAAAAsc/7dHTxkxn4cI/s32/google32.png" width=32 height=32 /></a>
                          <a href="http://www.facebook.com/AQUI_TU_PAGINA" target="_blank"><img alt="Siguenos en Facebook" src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png" width=32 height=32 /></a>
-                    </table>
-                    
+                    <aside id="barra">
+                        <input id="input" type="text" placeholder="petPocket@yavirac.ec">
+                        <button type="submit">Subscribirse</button>
+                    </aside>
                 </footer>
     </b>
 </body>

@@ -2,18 +2,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/paginaPrincipalCompleta.css" />
+    <link rel="stylesheet" href="/css/navegador.css" />
     <link rel="icon" href="/multimedia/Recurso 4.ico">
 
 <body
     background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
     <header>
-        <nav class="nav">
+        <nav id="nav">
 
             <!--Aqui va el nombre-->
-            <img class="logo" src="/multimedia/logo-removebg-preview.png">
+            <img id="logo" src="/multimedia/logo-removebg-preview.png">
             <!--Aqui se acaba-->
 
-            <ul class="menu">
+            <ul id="menu">
 
                 <!--Aqui va las opciones para la barra de busqueda
                 <li><a href="http://localhost:4000/registro_carnet">Agregar carnet</a></li>
@@ -22,13 +23,12 @@ Es un ejemplo para llamar a lo que deseen
                 <li><a href="#">Red social</a></li>
                 <li><a href="#">Perdidos</a></li>
                 <li><a href="#">Adopcion</a></li>
-                <li><a href="http://localhost:4000/bells/agregar/1">Campañas</a></li>
+                <li><a href="http://localhost:4000/bells/agregar">Campañas</a></li>
                 <li><a href="#">Reporte</a></li>
                 <li><a href="#">Ayuda</a></li>
                 <li><a href="#">Donaciones</a></li>
                 <li><a href="#">Tienda</a></li>
-                <li><a href="http://localhost:4000/login">cerrar sesion</a>
-                </li>
+                <li><a href="http://localhost:4000/login">cerrar sesion</a></li>
                 
                 <!--Aqui se acaba-->
             </ul>
@@ -40,16 +40,17 @@ Es un ejemplo para llamar a lo que deseen
     <u><b><h2 id="subtitulo1" align="center">Un lugar donde amamos a los animales.</h2></b></u>
     <u><b><h2 id="subtitulo1" align="center">Lo maravillosos de adoptar a una Mascota.</h2></b></u>
     <br></br>
-    <div class="container">
-        <main class="content">
-            <article class="article">
+
+    <div id="container">
+        <main id="content">
+            <article id="article">
                 <h1> Para que sirve pet pocket</h1>
                 <p>Sirve para ayudar a los animales brindando apoyo a rescatistas independientes en su intención de cuidar a los
                     animales sin hogar.
                     Dando oportunidaes a los animalitos a tener un hogar seguro que les brinden seguridad, cuidados y
                     amor.</p>
             </article>
-            <article class="article">
+            <article id="article">
                 <h1> Como se usa</h1>
                 <p>En la parte superior derecha podra registrar una o varias mascotas, despues tendra varias opciones
                     como publicar su mascota para llamar atencion , publicar a una mascota en adopcion o publicar que
@@ -58,9 +59,9 @@ Es un ejemplo para llamar a lo que deseen
             </article>
 
         </main>
-        <aside class="sidebar">
+        <aside id="sidebar">
             <b><u><p id="date">Galeria de mascotas en adopcion</p></u></b>
-            <table class="default" id="galeria">
+            <table id="default" id="galeria">
                 <tr>
                     <th colspan="2"><div>
                         <img src="/multimedia/gatita adopcion.jpg" alt="" width="105 px">
@@ -79,17 +80,17 @@ Es un ejemplo para llamar a lo que deseen
                 </tr>
             </table>        
         </aside>
-            <div class="related-post">            
+            <div id="related-post">            
             <video controls width="150px">
                 <source src="/multimedia/EL VALOR DE LA SENSIBILIZACIÓN POR LOS ANIMALES!!.mp4">
             </video>
             </div>
-            <div class="related-post">
+            <div id="related-post">
                 <video controls width="150px">
                     <source src="/multimedia/Tengo una mascota  ¿Cómo cuidar a nuestras mascotas.mp4">
                 </video>
             </div>
-            <div class="related-post">
+            <div id="related-post">
                 <video controls width="200px">
                     <source src="/multimedia/Adopta o rescata una mascota.mp4">
                 </video>
@@ -99,27 +100,13 @@ Es un ejemplo para llamar a lo que deseen
 
                 <footer id="pie">
                     <h4>Siguenos en nuestras redes </h4>
-                    <aside id="barra">
-                        <input type="text" placeholder="petPocket@yavirac.ec">
-                        <input type="button" value="subscribe">
-                        
-                    </aside>
-                    <table class="default" id="tabla">
-                        <tr>
-                            <th colspan="2"><a href="#"><li class="nav-item">Tienda</li></a></th>
-                            <th colspan="2"><a href="#"><li class="nav-item">Adopcion</li></a></th>
-                        </tr>
-                        <tr>
-                            <th colspan="2"><a href="#"><li class="nav-item">Ajustes</li></a></th>
-                            <th colspan="2"><a href="#"><li class="nav-item">Busqueda</li></a></th>
-                        </tr>
                         <a href="http://twitter.com/AQUI_TU_USUARIO" target="_blank"><img src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png" width=32 height=32 alt="Síguenos en Twitter"/></a>
                         <a rel="author" href="https://plus.google.com/TU_ID_GOOGLE?rel=author" target="_blank"><img alt="Siguenos en Google+" src="https://lh5.googleusercontent.com/-F_FBKktZWZk/T3nN0v4FeAI/AAAAAAAAAsc/7dHTxkxn4cI/s32/google32.png" width=32 height=32 /></a>
                          <a href="http://www.facebook.com/AQUI_TU_PAGINA" target="_blank"><img alt="Siguenos en Facebook" src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png" width=32 height=32 /></a>
-                    </table>
-                    
-                </footer>
+                    <aside id="barra">
+                        <input id="input" type="text" placeholder="petPocket@yavirac.ec">
+                        <button>Subscribirse</button>
+                    </aside>
+                </footer>     
     </b>
 </body>
-
-</html>
