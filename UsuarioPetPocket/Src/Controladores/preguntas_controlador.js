@@ -7,7 +7,7 @@ preguntasCtrl.mostrar =(req,res)=>{
 }
 
 preguntasCtrl.mandar= async(req,res)=>{
-    // const id =req.user.idUsuarios
+    const id =req.user.idUsuarios
     const {tituloPregunta,descripcionPregunta,fechaPregunta,horaPregunta}= req.body
     const nuevoEnvio ={
         tituloPregunta,
@@ -29,7 +29,7 @@ preguntasCtrl.lista = async(req,res)=>{
 preguntasCtrl.traer = async(req,res)=>{
     const ids = req.params.id
     const lista = await sql.query('select * from preguntas where idAyudaPet =?',[ids])
-    res.render('preguntas/preguntasLi/preguntasEd',{lista})
+    res.render('preguntas/preguntasEd',{lista})
 }
 
 preguntasCtrl.actualizar = async(req,res)=>{
@@ -55,7 +55,7 @@ preguntasCtrl.eliminar = async (req,res)=>{
     await orm.preguntas.destroy({where: {idAyudaPet: ids}})
     .then(()=>{
         req.flash('succes','Actualizado con exito')
-        res.redirect('/preguntas/preguntasLi/'+id)
+        res.redirect('/preguntas/preguntasLi/')
     })
     
 }
