@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="/css/denuncia/denunciado.css">
+<link rel="stylesheet" href="/css/paginaPrincipalCompleta.css" />
+<link rel="stylesheet" href="/css/navegador.css" />
+<title>DENUNCIADOS</title>
+
+<body
+    background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
+    <header>
+        <nav id="nav">
+
+            <!--Aqui va el nombre-->
+            <img id="logo" src="/multimedia/logo-removebg-preview.png">
+            <!--Aqui se acaba-->
+
+            <ul id="menu">
+                
+                <li><a href="#">Red social</a></li>
+                <li><a href="#">Perdidos</a></li>
+                <li><a href="#">Adopcion</a></li>
+                <li><a href="http://localhost:4000/campañas">Campañas</a></li>
+                <li><a href="#">Reporte</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Donaciones</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="http://localhost:4000/login">cerrar sesion</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+<center>
+<div id="contenedor">
+     <div class="row">
+        {{#each lista}}
+        <div id="flex-container">
+           
+            <div id="caja">
+                <p>{{descripccionDenunciado}}</p>
+            </div>
+            <br><br>
+            <div id="boton">
+                <div id="editar">
+                    <a href="/denunciado/editar/{{idDenunciado}}"><button type="button">Editar</button></a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    </div>
+
+
+</center>
+
+</form>

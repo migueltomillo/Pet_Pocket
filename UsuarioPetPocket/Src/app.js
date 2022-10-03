@@ -72,6 +72,10 @@ app.use('/preguntas',require('./Rutas/preguntas.rutas'))
 app.use("/tienda",require('./Rutas/tienda.rutas'))
 //veterinaria de mascotas
 app.use('/veterinaria', require('./Rutas/veterinaria.rutas'));
+//denuncia y denunciados
+app.use('/denuncia',require('./Rutas/denuncia.ruta'));
+app.use('/denunciado',require('./Rutas/denunciado.ruta'));
+
 //principales
 app.use(require("./Rutas/index.rutas"))
 app.use(require("./Rutas/registro.rutas"))
