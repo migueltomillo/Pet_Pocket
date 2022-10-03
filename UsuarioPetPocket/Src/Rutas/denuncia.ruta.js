@@ -1,8 +1,14 @@
-const {Router} =require('express');
-const router = Router();
+const express = require('express');
+const rutas = express.Router()
 
-const {denunciaBienvenida} = require('../Controladores/denuncia_controlador');
+const { mostrar, mandar, lista, traer, actualizar, eliminar }= require('../controladores/denuncia_controlador')
+const { isLoggedIn } = require('../lib/auth')
 
-router.get('/denuncia_bienvenida', denunciaBienvenida);
+rutas.get('/agregar/:id', isLoggedIn, mostrar)
+rutas.post('/agregar/:id',isLoggedIn,  mandar)
+rutas.get('/lista/:id',isLoggedIn, lista)
+rutas.get('/editar/:id',isLoggedIn, traer)
+rutas.post('/editar/:id',isLoggedIn, actualizar)
+rutas.get('/eliminar/:id',isLoggedIn, eliminar)
 
-module.exports = router;
+module.exports= rutas

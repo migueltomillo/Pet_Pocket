@@ -1,9 +1,11 @@
-   <LINK REL="stylesheet" HREF="/css/mascotas/registro.css" TYPE="text/css" MEDIA=screen>
-      <link rel="stylesheet" href="/css/navegador.css" />
+<link rel="stylesheet" href="/css/denuncia/denuncia.css">
+<link rel="stylesheet" href="/css/paginaPrincipalCompleta.css" />
+<link rel="stylesheet" href="/css/navegador.css" />
+<title>DENUNCIA</title>
 
 <body
     background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
-   <header>
+    <header>
         <nav id="nav">
 
             <!--Aqui va el nombre-->
@@ -11,76 +13,56 @@
             <!--Aqui se acaba-->
 
             <ul id="menu">
-
-                <!--Aqui va las opciones para la barra de busqueda
-                <li><a href="http://localhost:4000/registro_carnet">Agregar carnet</a></li>
-Es un ejemplo para llamar a lo que deseen
-                -->
+                
                 <li><a href="#">Red social</a></li>
                 <li><a href="#">Perdidos</a></li>
                 <li><a href="#">Adopcion</a></li>
-                <li><a href="http://localhost:4000/bells/agregar">Campañas</a></li>
+                <li><a href="http://localhost:4000/campañas">Campañas</a></li>
                 <li><a href="#">Reporte</a></li>
                 <li><a href="#">Ayuda</a></li>
                 <li><a href="#">Donaciones</a></li>
                 <li><a href="#">Tienda</a></li>
-                <li><a href="http://localhost:4000/login">cerrar sesion</a></li>
-                
-                <!--Aqui se acaba-->
+                <li><a href="http://localhost:4000/login">cerrar sesion</a>
+                </li>
             </ul>
         </nav>
     </header>
     <!--Aqui se acaba el nav-->
+
+<div id="intro">
+    <h1>  Denuncias </h1>
+</div>
+
+<div>
+    <form action="/denuncias/agregar/{{user.idUsuarios}}" method="post" id="contenedor">
     <div id="titulo">
-        <p>Mascotas perdidas</p>
+        <p> denuncia a los maltratadores </p>
     </div>
-    <div>
-        <form action="/mascota/agregar/{{user.idUsuarios}}" method="post"id="contenedor">
-    <div id="contenido">
-        <div id="nombre">
-            <label>Nombre de la mascota</label>
-            <input type="text" name="nombre" required>
-        </div>
-        <div id="raza">
-            <label>raza</label>
-            <input type="text" name="raza" required>
-        </div>
-         <div id="edad">
-            <label>Edad</label>
-            <input type="number" name="edad" required>
-        </div>
-         <div id="Peso">
-            <label>Peso</label>
-            <input type="number" name="peso" required>
-        </div>
-         <div id="descripcion">
-            <label>descripcion</label>
-            <input type="text" name="descripcion" required>
-        </div>
-         <div id="foto">
-            <label>foto</label>
-            <input type="text" name="foto" required>
-        </div>
-        <div id="boton">
-            <button type="submit">Guardar</button>
-        </div>
-    </div>
-    </div>
-    <br><br>
 
-    <!--Aqui empieza el foter-->
-          <footer id="pie">
-                    <h4>Siguenos en nuestras redes </h4>
-                        <a href="http://twitter.com/AQUI_TU_USUARIO" target="_blank"><img src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png" width=32 height=32 alt="Síguenos en Twitter"/></a>
-                        <a rel="author" href="https://plus.google.com/TU_ID_GOOGLE?rel=author" target="_blank"><img alt="Siguenos en Google+" src="https://lh5.googleusercontent.com/-F_FBKktZWZk/T3nN0v4FeAI/AAAAAAAAAsc/7dHTxkxn4cI/s32/google32.png" width=32 height=32 /></a>
-                         <a href="http://www.facebook.com/AQUI_TU_PAGINA" target="_blank"><img alt="Siguenos en Facebook" src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png" width=32 height=32 /></a>
-                    <aside id="barra">
-                        <input id="input" type="text" placeholder="petPocket@yavirac.ec">
-                        <button>Subscribirse</button>
-                    </aside>
-                </footer>     
+    <div id="titulodenuncias">
+        <label>Sector:</label>
+        <input type="text" id="nombre" name="tituloDenuncias" required>
+    </div>
 
+    <div id="categoriaDenuncias">
+        <label> Tipo de mascota:</label>
+        {{!-- <input type="text" name="FechaPerdido" required>  --}}
+               <select name="Categoria">
+                    <option>Perro</option>
+                    <option>Gato</option>
+
+                </select>
+    </div>
+    <div id="descripccionDenuncias">
+        <label>Descripcion:</label>
+        <input type="text"  name="descripccionDenuncias" required>
+    </div>
+
+    <div id="boton">
+        <button type="submit">SUBIR</button>
+    </div>
+
+    </form>
+</div>
 
 </body>
-
-</html>

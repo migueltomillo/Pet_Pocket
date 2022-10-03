@@ -1,30 +1,63 @@
-const registro = {};
+const DenunciaCTl = {}
 
-const passport = require('passport');
+const orm = require('../Base de datos/BaseDatos.orm')
+const sql = require('../Base de datos/BaseDatos.sql')
 
-registro.mostrarRegistro = async(req, res) => {
-    res.render('login/registro');
-};
+DenunciaCTl.mostrar = (req, res) => {
+    res.render('denuncia/agregar');
+}
 
-registro.Registro = passport.authenticate('local.signup', {
-    successRedirect: '/CerrarSecion',
-    failureRedirect: '/Registro',
-    failureFlash: true
-});
+DenunciaCTl.mandar = async (req, res) => {
+     const id = req.user.idUsuario
+    const { fotoDenuncia, categoriaDenuncia, descripccionDenuncia, tituloDenuncia } = req.body
+    const nuevoDenuncia = {
+        fotoDenuncia,
+        categoriaDenuncia,
+        descripccionDenuncia,
+        tituloDenuncia,
+    }
+    await orm.Denuncia.create(nuevoDenuncia)
+    req.flash('success', 'Guardado con exito')
+    res.redirect('/denuncia/lista/' + id);
+}
 
-registro.mostrarLogin = (req, res, next) => {
-    res.render('login/login');
-};
+DenunciaCTl.lista = async (req, res) => {
+    const lista = await sql.query('select * from denuncias')
+    res.render('denuncia/lista', { lista })
+}
 
-registro.Login = passport.authenticate('local.signin', {
-    successRedirect: '/inicio',
-    failureRedirect: '/',
-    failureFlash: true
-}); 
+DenunciaCTl.traer = async (req, res) => {
+    const ids = req.params.id
+    const lista = await sql.query('select * from denuncias where iddenuncia = ?', [ids])
+    res.render('denuncia/editar', { lista })
+}
 
-registro.cierreSesion = (req, res, next) => {
-    req.logOut();
-    res.redirect('/');
-};
+DenunciaCTl.actualizar = async (req, res) => {
+    const id = req.user.idUsuario
+    const ids = req.params.id
+    const { fotoDenuncia, categoriaDenuncia, descripccionDenuncia, tituloDenuncia } = req.body
+    const nuevoProducto = {
+        fotoDenuncia,
+        categoriaDenuncia,
+        descripccionDenuncia,
+        tituloDenuncia,
+    }
+    await orm.Denuncia.findOne({ where: { idDenuncia: ids } })
+        .then(actualizar => {
+            actualizar.update(nuevoProducto)
+            req.flash('success', 'Actuaizado con exito')
+            res.redirect('/denuncia/lista/' + ids);
+        })
+}
 
-module.exports = registro;
+DenunciaCTl.eliminar = async (req, res) => {
+    const ids = req.params.id
+    const id = req.user.idUsuario
+    await orm.Denuncia.destroy({ where: { idDenuncia: ids } })
+        .then(() => {
+            req.flash('success', 'Actuaizado con exito')
+            res.redirect('/denuncia/lista/' + id);
+        })
+}
+
+module.exports = DenunciaCTl;
