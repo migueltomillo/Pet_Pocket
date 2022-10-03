@@ -1,7 +1,7 @@
-<link rel="stylesheet" href="/css/denuncia/denunciado.css">
+<link rel="stylesheet" href="/css/Denuncialo/lista.css">
 <link rel="stylesheet" href="/css/paginaPrincipalCompleta.css" />
 <link rel="stylesheet" href="/css/navegador.css" />
-<title>DENUNCIADOS</title>
+<title>PERDIDOS</title>
 
 <body
     background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
@@ -27,19 +27,26 @@
             </ul>
         </nav>
     </header>
+    <!--Aqui se acaba el nav-->
 <center>
 <div id="contenedor">
      <div class="row">
         {{#each lista}}
         <div id="flex-container">
+            <div id="caja">
+                <p>{{tituloDenuncialo}}</p>
+            </div>
            
             <div id="caja">
-                <p>{{descripccionDenunciado}}</p>
+                <p>{{descripccionDenuncialo}}</p>
             </div>
             <br><br>
             <div id="boton">
                 <div id="editar">
-                    <a href="/denunciado/editar/{{idDenunciado}}"><button type="button">Editar</button></a>
+                    <a href="/Denuncialo/editar/{{idDenuncialo}}"><button type="button">Editar</button></a>
+                </div>
+                <div id="eliminar">
+                    <a href="/Denuncialo/eliminar/{{idDenuncialo}}"><button type="button">Eliminar</button></a>
                 </div>
             </div>
         </div>
@@ -51,3 +58,4 @@
 </center>
 
 </form>
+

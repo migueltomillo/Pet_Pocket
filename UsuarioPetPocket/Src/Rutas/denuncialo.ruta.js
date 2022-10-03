@@ -1,7 +1,7 @@
 const express = require('express');
 const rutas = express.Router()
 
-const { mostrar, mandar, lista, traer, actualizar, eliminar }= require('../Controladores/denunciado.controladors')
+const { mostrar, mandar, lista, traer, actualizar, eliminar }= require('../controladores/denuncialo.controlador')
 const { isLoggedIn } = require('../lib/auth')
 
 rutas.get('/agregar/:id', isLoggedIn, mostrar)

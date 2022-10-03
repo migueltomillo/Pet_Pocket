@@ -1,20 +1,19 @@
-const denuncia =(sequlize, type) =>{
-    return sequlize.define('denuncia',{
-        idDenuncia: {
+const denuncialo =(sequlize, type) =>{
+    return sequlize.define('denuncialo',{
+        idDenuncialo: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        tituloDenuncia: type.STRING,
-        descripccionDenuncia: type.STRING,
-        categoriaDenuncia: type.STRING,
-        fotoDenuncia: type.STRING,
-        creacionDenuncia:{
+        tituloDenuncialo: type.STRING,
+        descripccionDenuncialo: type.STRING,
+        categoriaDenuncialo: type.STRING,
+        creacionDenuncialo:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionDenuncia:{
+        actualizacionDenuncialo:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -23,5 +22,5 @@ const denuncia =(sequlize, type) =>{
         timestamps: false,
     })
 }
-module.exports = denuncia
+module.exports = denuncialo
 
