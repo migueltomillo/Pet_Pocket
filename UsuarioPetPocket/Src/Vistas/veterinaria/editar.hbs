@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="/css/navegador.css" />
+<link rel="stylesheet" href="/css/veterinaria/editar.css" />
+<link rel="icon" href="/multimedia/Recurso 4.ico">
+
+<body
+    background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
+    <header>
+        <nav id="nav">
+
+            <!--Aqui va el nombre-->
+            <img id="logo" src="/multimedia/logo-removebg-preview.png">
+            <!--Aqui se acaba-->
+
+            <ul id="menu">
+
+                <!--Aqui va las opciones para la barra de busqueda
+                <li><a href="http://localhost:4000/registro_carnet">Agregar carnet</a></li>
+Es un ejemplo para llamar a lo que deseen
+                -->
+                <li><a href="#">Red social</a></li>
+                <li><a href="#">Perdidos</a></li>
+                <li><a href="#">Adopcion</a></li>
+                <li><a href="http://localhost:4000/bells/agregar">Campañas</a></li>
+                <li><a href="#">Reporte</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Donaciones</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="http://localhost:4000/login">cerrar sesion</a></li>
+
+                <!--Aqui se acaba-->
+            </ul>
+        </nav>
+    </header>
+
+    <br></br>
+    <b>
+        <h1 id="titulo" align="center">Veterinarias</h1>
+    </b>
+    <u><b>
+            <h2 id="subtitulo1" align="center">Un lugar donde amamos a los animales.</h2>
+        </b></u>
+
+    <!--inicio del crud-->
+    {{#each lista}}
+    <form action="/veterinaria/editar/{{idVeterinaria}}" method="post">
+        <div id="container">
+
+            <div id="nombre">
+                <label>Nombre de la Veterinaria:</label>
+                <input type="text" name="nombre" value="{{nombre}}" required>
+            </div>
+            <div id="sector">
+                <label>Sector:</label>
+                <input type="text" name="sector" value="{{sector}}" required>
+            </div>
+            <div id="calle">
+                <label>Calle:</label>
+                <input type="text" name="calle" value="{{calle}}" required>
+            </div>
+            <div id="telefono">
+                <label>Telefono:</label>
+                <input type="text" name="telefono" value="{{telefono}}" required>
+            </div>
+            <div id="especialidad">
+                <label>Especialidad:</label>
+                <input type="text" name="especialidad" value="{{especialidad}}" required>
+            </div>
+            <div id="boton">
+                <button type="submit" href="../veterinaria/lista/{{idVeterinaria}}">Actualizar</button>
+            </div>
+        </div>
+    </form>
+    {{/each}}
+
+    <!--fin del crud-->
+
+    </b>
+</body>
+
+</html>

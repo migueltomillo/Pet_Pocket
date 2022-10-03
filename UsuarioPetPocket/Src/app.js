@@ -70,7 +70,9 @@ app.use('/bells', require('./Rutas/bells.rutas'))
 app.use('/preguntas',require('./Rutas/preguntas.rutas'))
 //tienda de mascotas
 app.use("/tienda",require('./Rutas/tienda.rutas'))
-
+//veterinaria de mascotas
+app.use('/veterinaria', require('./Rutas/veterinaria.rutas'));
+//principales
 app.use(require("./Rutas/index.rutas"))
 app.use(require("./Rutas/registro.rutas"))
 // Index

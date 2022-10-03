@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="/css/navegador.css" />
+<link rel="stylesheet" href="/css/veterinaria/lista.css" />
+<link rel="icon" href="/multimedia/Recurso 4.ico">
+
+<body
+    background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
+    <header>
+        <nav id="nav">
+
+            <!--Aqui va el nombre-->
+            <img id="logo" src="/multimedia/logo-removebg-preview.png">
+            <!--Aqui se acaba-->
+
+            <ul id="menu">
+
+                <!--Aqui va las opciones para la barra de busqueda
+                <li><a href="http://localhost:4000/registro_carnet">Agregar carnet</a></li>
+Es un ejemplo para llamar a lo que deseen
+                -->
+                <li><a href="#">Red social</a></li>
+                <li><a href="#">Perdidos</a></li>
+                <li><a href="#">Adopcion</a></li>
+                <li><a href="http://localhost:4000/bells/agregar">Campañas</a></li>
+                <li><a href="#">Reporte</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><a href="#">Donaciones</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="http://localhost:4000/login">cerrar sesion</a></li>
+
+                <!--Aqui se acaba-->
+            </ul>
+        </nav>
+    </header>
+
+    <br></br>
+    <b>
+        <h1 id="titulo" align="center">Veterinarias</h1>
+    </b>
+    <u><b>
+            <h2 id="subtitulo1" align="center">Un lugar donde amamos a los animales.</h2>
+        </b></u>
+
+    <!--inicio del crud-->
+    <form action="/veterinaria/lista/{{user.idUsuarios}}" method="get">
+        <div id="contenedor">
+            <div id="row">
+                {{#each lista}}
+                <div id="tarjeta">
+                    <div id="nombre">
+                        <p>{{nombre}}</p>
+                    </div>
+                    <div id="sector">
+                        <p>{{sector}}</p>
+                    </div>
+                    <div id="telefono">
+                        <p>{{telefono}}</p>
+                    </div>
+                    <div id="calle">
+                        <p>{{calle}}</p>
+                    </div>
+                    <div id="especialidad">
+                        <p>{{especialidad}}</p>
+                    </div>
+                 
+                        <div id="eliminar">
+                            <a href="/veterinaria/eliminar/{{idVeterinaria}}"><button
+                                    type="button">Eliminar</button></a>
+                        </div>
+                    </div>
+
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <!--fin del crud-->
+
+        </b>
+</body>
+
+</html>

@@ -1,20 +1,29 @@
 const veterinarias =(sequelize, type) =>{
     return sequelize.define('veterinarias', {
-        idveterinarias: {
+        idVeterinaria: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        titulo: type.STRING(99),
-        descripcion: type.STRING(99),
-        telefono: type.INTEGER(10),
+/* nombre: type.STRING(99), */        
 
-        creacionVeterinarias:{
+        nombre: 
+        {type: type.STRING(99),},
+        
+
+
+
+        sector: type.STRING(99),
+        telefono: type.INTEGER(10),
+        calle: type.INTEGER(10),
+        especialidad: type.INTEGER(10),
+
+        creacionbell:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        actualizacionVeterinarias:{
+        actualizacionbell:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -23,5 +32,6 @@ const veterinarias =(sequelize, type) =>{
         timestamps: false,
     })
 }
+
 
 module.exports = veterinarias
