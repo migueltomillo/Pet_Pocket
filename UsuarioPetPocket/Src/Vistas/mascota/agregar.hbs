@@ -1,4 +1,4 @@
-    <LINK REL="stylesheet" HREF="/css/mascotas/registro.css" TYPE="text/css" MEDIA=screen>
+    <LINK REL="stylesheet" HREF="/css/mascotas/registro.css" TYPE="text/css" >
       <link rel="stylesheet" href="/css/navegador.css" />
 
 <body
@@ -13,7 +13,7 @@
             <ul id="menu">
                <li><a href="http://localhost:4000/mascota/agregar/1">Mascota</a></li>
                 <li><a href="http://localhost:4000/perdido/agregar/1">Perdidos</a></li>
-                <li><a href="#">Adopcion</a></li>
+                <li><a href="http://localhost:4000/adopcion">Adopcion</a></li>
                 <li><a href="http://localhost:4000/bells/agregar/1">Campañas</a></li>
                 <li><a href="http://localhost:4000/denuncialo/agregar/1">Reporte</a></li>
                 <li><a href="http://localhost:4000/preguntas/preguntas/1">Ayuda</a></li>
@@ -27,7 +27,7 @@
     </header>
     <!--Aqui se acaba el nav-->
     <div id="titulo">
-        <p>Mascotas perdidas</p>
+        <p>Agregar mascotas </p>
     </div>
     <div>
         <form action="/mascota/agregar/{{user.idUsuarios}}" method="post"id="contenedor">
@@ -56,6 +56,7 @@
             <label>foto</label>
             <input type="text" name="foto" required>
         </div>
+        <br>
         <div id="boton">
             <button type="submit">Guardar</button>
         </div>

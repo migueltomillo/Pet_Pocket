@@ -1,8 +1,6 @@
+<link rel="stylesheet" href="/css/adopcion/agregar.css">
 <link rel="stylesheet" href="/css/paginaPrincipalCompleta.css" />
 <link rel="stylesheet" href="/css/navegador.css" />
-<link rel="stylesheet" href="/css/denuncialo/agregar.css">
-
-<title>PERDIDOS</title>
 
 <body
     background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
@@ -14,7 +12,6 @@
             <!--Aqui se acaba-->
 
             <ul id="menu">
-                
                 <li><a href="http://localhost:4000/mascota/agregar/1">Mascota</a></li>
                 <li><a href="http://localhost:4000/perdido/agregar/1">Perdidos</a></li>
                 <li><a href="http://localhost:4000/adopcion">Adopcion</a></li>
@@ -29,35 +26,31 @@
         </nav>
     </header>
     <!--Aqui se acaba el nav-->
-    <div id="contenedor">
-    {{#each lista}}
+    <center>
+        <div id="contenedor">
 
-    <form action="/Denuncialo/editar/{{idDenuncialo}}" method="post">
-    <div id="titulo">
-        <p> Denuncialos </p>
-    </div>
+            <form action="/adopcion/agregar/1" method="post">
+                <div id="titulo">
+                    <p>Crear Perfil</p>
+                </div>
+                <div id="tituloAdopcion">
+                    <label>Titulo: </label>
+                    <input type="text" name="tituloAdopcion" required>
+                </div>
+                <div id="imagenAdopcion">
+                    <label>Imagen</label>
+                    <input type="text" name="imagenAdopcion" required>
+                </div>
+                <div id="descripcionAdopcion">
+                    <label>Descripción: </label>
+                    <input type="text" name="descripcionAdopcion" required>
+                </div>
+                </p>
+                <div id="boton">
+                    <p><button type="submit">Agregar</button>
+                        <button type="submit">Cancelar</button>
+                    </p>
+                </div>
+            </form>
 
-    <div id="tituloDenuncialo">
-        <label>Denuncia:</label>
-        <input type="text" name="tituloDenuncialo" value="{{tituloDenuncialo}}" required>
-    </div>
-
-    <div id="categoriaDenuncialo">
-        <label> Categoria Producto:</label>
-        {{!-- <input type="text" name="FechaPerdido" required>  --}}
-               <select name="Categoria" value="{{categoriaDenuncialo}}" >
-                    <option>Perro</option>
-                    <option>Gato</option>
-                </select>
-    </div>
-    <div id="descripccionDenuncialo">
-        <label>Descripcion:</label>
-        <input type="text" name="descripccionDenuncialo" value="{{descripccionDenuncialo}}" required>
-    </div>
-
-    <div id="boton">
-        <button type="submit">Actualizar</button>
-    </div>
-    </form>
-    {{/each}}
-</div>
+    </center>

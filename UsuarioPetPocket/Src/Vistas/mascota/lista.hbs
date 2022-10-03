@@ -1,8 +1,6 @@
-<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="/css/navegador.css" />
-    <link rel="stylesheet" href="/css/bells/editarbell.css" />
+
     <link rel="icon" href="/multimedia/Recurso 4.ico">
 
 <body
@@ -16,10 +14,9 @@
 
             <ul id="menu">
 
-                
-               <li><a href="http://localhost:4000/mascota/agregar/1">Mascota</a></li>
+             <li><a href="http://localhost:4000/mascota/agregar/1">Mascota</a></li>
                 <li><a href="http://localhost:4000/perdido/agregar/1">Perdidos</a></li>
-                <li><a href="#">Adopcion</a></li>
+                <li><a href="http://localhost:4000/adopcion">Adopcion</a></li>
                 <li><a href="http://localhost:4000/bells/agregar/1">Campañas</a></li>
                 <li><a href="http://localhost:4000/denuncialo/agregar/1">Reporte</a></li>
                 <li><a href="http://localhost:4000/preguntas/preguntas/1">Ayuda</a></li>
@@ -32,28 +29,32 @@
         </nav>
     </header>
     <form action="/mascota/lista/{{user.idUsuarios}}" method="get"></form>
+    <br><br>
+    <center>
 <div id="contenido">
-    <div class="raw">
+    <div id="raw">
         {{#each lista}}
         <div id="tarjeta">
             <div id="titulo">
-                <p>{{nombre}}</p>
+              <h5>Nombre de la mascota</h5>  <p>{{nombre}}</p>
             </div>
+            <br>
             <div id="codigo">
-                <p>{{raza}}</p>
+               <h4>Raza</h4>  <p>{{raza}}</p>
             </div>
              <div id="codigo">
-                <p>{{edad}}</p>
+                <h4>Edad</h4>  <p>{{edad}}</p>
             </div>
              <div id="codigo">
-                <p>{{peso}}</p>
+                <h4>Peso</h4>  <p>{{peso}}</p>
             </div>
              <div id="codigo">
-                <p>{{descripcion}}</p>
+               <h4>descripcion</h4>   <p>{{descripcion}}</p>
             </div>
              <div id="codigo">
-                <p>{{foto}}</p>
+                <h4>foto</h4>  <p>{{foto}}</p>
             </div>
+            <br>
             <div id="editar">
                 <div id="boton">
                     <a href="/mascota/editar/{{idMascotas}}"><button type="button">Editar</button></a>
@@ -67,4 +68,4 @@
         </div>
         {{/each}}
     </div>
-</div>
+</div></center>

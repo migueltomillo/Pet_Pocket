@@ -74,6 +74,8 @@ app.use("/tienda",require('./Rutas/tienda.rutas'))
 app.use('/veterinaria', require('./Rutas/veterinaria.rutas'));
 //denuncias
 app.use('/denuncialo',require('./Rutas/denuncialo.ruta'));
+//adopcion de mascotas
+app.use(require('./Rutas/adopcion.rutas'));
 
 
 //principales

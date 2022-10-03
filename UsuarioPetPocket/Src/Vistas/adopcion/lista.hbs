@@ -1,8 +1,6 @@
-<link rel="stylesheet" href="/css/tienda/lista.css">
+<link rel="stylesheet" href="/css/adopcion/lista.css">
 <link rel="stylesheet" href="/css/paginaPrincipalCompleta.css" />
-<link rel="stylesheet" href="/css/navegador.css" />
-<title>PERDIDOS</title>
-
+          <link rel="stylesheet" href="/css/navegador.css" />
 <body
     background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
     <header>
@@ -13,8 +11,8 @@
             <!--Aqui se acaba-->
 
             <ul id="menu">
-                
-             <li><a href="http://localhost:4000/mascota/agregar/1">Mascota</a></li>
+
+              <li><a href="http://localhost:4000/mascota/agregar/1">Mascota</a></li>
                 <li><a href="http://localhost:4000/perdido/agregar/1">Perdidos</a></li>
                 <li><a href="http://localhost:4000/adopcion">Adopcion</a></li>
                 <li><a href="http://localhost:4000/bells/agregar/1">Campañas</a></li>
@@ -27,36 +25,32 @@
         </nav>
     </header>
     <!--Aqui se acaba el nav-->
-<center>
+<form action="adopcion/lista/1" method="get"></form>
 <div id="contenedor">
-     <div class="row">
+    <div class="row">
         {{#each lista}}
-        <div id="flex-container">
-            <div id="caja">
-                <p>{{fotoTienda}}</p>
+        <div id="tarjeta">
+            <div id="idAdopcion">
+                <p>{{idAdopcion}}</p>
             </div>
-            <div id="caja">
-                <p>{{tituloTienda}}</p>
+            <div id="tituloAdopcion">
+                <p>{{tituloAdopcion}}</p>
             </div>
-           
-            <div id="caja">
-                <p>{{descripccionTienda}}</p>
+            <div id="imagenAdopcion">
+                <p>{{imagenAdopcion}}</p>
             </div>
-            <br><br>
+            <div id="descripcionAdopcion">
+                <p>{{descripcionAdopcion}}</p>
+            </div>
             <div id="boton">
                 <div id="editar">
-                    <a href="/tienda/editar/{{idtienda}}"><button type="button">Editar</button></a>
-                </div>
+                    <a href="/adopcion/editar/{{idAdopcion}}"><button type="button">Editar</button></a>
+                </div></p>
                 <div id="eliminar">
-                    <a href="/tienda/eliminar/{{idtienda}}"><button type="button">Eliminar</button></a>
-                </div>
+                    <a href="/adopcion/eliminar/{{idAdopcion}}"><button type="button">Eliminar</button></a>
+                </div></p>
             </div>
         </div>
         {{/each}}
     </div>
-    </div>
-
-
-</center>
-
-</form>
+</div>

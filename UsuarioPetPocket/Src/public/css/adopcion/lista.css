@@ -1,0 +1,56 @@
+#titulo {
+    font-size: 40px;
+    font-family: cursive;
+    margin-top: 40px;
+    color: #ffb200;
+}
+
+#tarjeta {
+    background-color: #ffcb42;
+    width: 30%;
+    height: 100%;
+    margin-left: 100px;
+    border: solid 3px #277bc0;
+    padding: 10px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+
+
+input {
+    background-color: #ffb200;
+    border: solid 1px rgb(192, 173, 4);
+    padding: 3px;
+    width: 120px;
+    color: #fff;
+    margin-top: 1px;
+    border-radius: 20px;
+}
+
+select {
+    background-color: #ffb200;
+    border: solid 1px rgb(31, 28, 28);
+    padding: 5px;
+    width: 220px;
+    color: #fff;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+
+#button {
+    position: fixed;
+    background-color: #277bc0;
+    border: 1px #277bc0;
+    width: 130px;
+    color: #277bc0;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+label {
+    color: #ffb200;
+    font-family: cursive;
+    display: block;
+    margin: 10px;
+}
