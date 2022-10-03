@@ -61,7 +61,7 @@ sequelize.sync({ force: false })
   const tienda = tiendaModelo(sequelize, Sequelize);
   const producto = productoModelo(sequelize, Sequelize);
   const veterinarias = veterinariasModelo(sequelize, Sequelize)
-  const denuncialo = denuncialoloModelo(sequelize, Sequelize)
+  const denuncialo = denuncialoModelo(sequelize, Sequelize)
  
 
   usuario.hasMany(proyecto)

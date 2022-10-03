@@ -9,11 +9,12 @@ denuncialoCTl.mostrar = (req, res) => {
 
 denuncialoCTl.mandar = async (req, res) => {
      const id = req.user.idUsuario
-    const { categoriaDenuncialo, descripccionDenuncialo, tituloDenuncialo } = req.body
+    const { tituloDenuncialo,descripccionDenuncialo,categoriaDenuncialo } = req.body
     const nuevoDenuncialo = {
-        categoriaDenuncialo,
-        descripccionDenuncialo,
         tituloDenuncialo,
+        descripccionDenuncialo,
+        categoriaDenuncialo,
+
     }
     await orm.denuncialo.create(nuevoDenuncialo)
     req.flash('success', 'Guardado con exito')
