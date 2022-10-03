@@ -1,7 +1,8 @@
 
-    <LINK REL=StyleSheet HREF="/css/preguntasEd.css" TYPE="text/css" MEDIA=screen>
+    {{!-- <LINK REL=StyleSheet HREF="/css/preguntasEd.css" TYPE="text/css" MEDIA=screen> --}}
     <link rel="stylesheet" href="/css/paginaPrincipalCompleta.css" />
     <link rel="stylesheet" href="/css/navegador.css" />
+    <link rel="stylesheet" href="/css/preguntas/preguntasEd.css">
     <title>PERDIDOS</title>
 
 
@@ -33,7 +34,7 @@
     {{#each lista}}
     <form action="/preguntas/preguntasEd/{{idAyudaPet}}" method="post"> {{!-aqui puede haber un error por el usuario}}
         <div id="titulo">
-            <p>En que te podemos ayudar</p>
+            <p>Que deseas cambiar?</p>
         </div>
         <div id="TituloPregunta">
             <label for="">Cual es tu pregunta?</label>

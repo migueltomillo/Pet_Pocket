@@ -13,14 +13,52 @@
     background-color: white;
     
     border: 5px solid #FFB200;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-top: 5vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    margin-top: 6vh;
     border-radius: 4rem;
 }
 #idPregunta{
     
-    font-size: 35px;
+    font-size: 3vw;
     font-weight: 700;
     color: #277bc0;
+}
+
+#desPregunta p {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+#preguntaFe,#preguntaHo{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+#preguntaFe p{
+    margin-right: 2rem;
+}
+
+#preguntaHo p{
+    margin-left: 2rem;
+}
+
+#boton{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+
+    
+}
+
+#boton button{
+    background-color: #277bc0;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: #FFB200;
 }
