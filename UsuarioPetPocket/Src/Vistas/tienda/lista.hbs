@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/tienda/lista.css">
+<link rel="stylesheet" href="/css/perdidos/lista.css"  TYPE="text/css" MEDIA=screen>
 <link rel="stylesheet" href="/css/paginaPrincipalCompleta.css" />
 <link rel="stylesheet" href="/css/navegador.css" />
 <title>PERDIDOS</title>
@@ -27,23 +27,26 @@
         </nav>
     </header>
     <!--Aqui se acaba el nav-->
-<center>
 <div id="contenedor">
-     <div class="row">
+
+    <div>
         {{#each lista}}
-        <div id="flex-container">
-            <div id="caja">
-                <p>{{fotoTienda}}</p>
+        <div id="tarjeta">
+            <div id="stitulo">
+                 <p> <strong>Encuentra tus <BR> Productos</strong></p>
             </div>
-            <div id="caja">
-                <p>{{tituloTienda}}</p>
+
+            <div id="imagen">
+            <p>{{fotoTienda}}</p>
             </div>
+        <div id="fecha">
+            <p>{{tituloTienda}}</p>
+        </div>
            
-            <div id="caja">
-                <p>{{descripccionTienda}}</p>
-            </div>
-            <br><br>
-            <div id="boton">
+        <div id="descripcion">
+            <p>{{descripccionTienda}}</p>
+        </div>
+            <div>
                 <div id="editar">
                     <a href="/tienda/editar/{{idtienda}}"><button type="button">Editar</button></a>
                 </div>
@@ -53,10 +56,7 @@
             </div>
         </div>
         {{/each}}
-    </div>
-    </div>
+    </div> 
+</div> <br> <br>
 
-
-</center>
-
-</form>
+</body>

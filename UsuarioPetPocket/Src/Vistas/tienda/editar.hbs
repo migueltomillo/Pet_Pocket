@@ -1,6 +1,6 @@
+<link rel="stylesheet" href="/css/perdidos/editar.css">
 <link rel="stylesheet" href="/css/paginaPrincipalCompleta.css" />
-<link rel="stylesheet" href="/css/navegador.css" />
-<link rel="stylesheet" href="/css/tienda/agregar.css">
+      <link rel="stylesheet" href="/css/navegador.css" />
 
 <title>PERDIDOS</title>
 
@@ -29,24 +29,24 @@
         </nav>
     </header>
     <!--Aqui se acaba el nav-->
-    <div id="contenedor">
+    <div>
     {{#each lista}}
 
-    <form action="/tienda/editar/{{idtienda}}" method="post">
-    <div id="titulo">
+    <form action="/tienda/editar/{{idtienda}}" method="post" id="contenedor">
+    <div id="stitulo">
         <p> Agrega tus productos favoritos </p>
     </div>
 
-    <div id="tituloTienda">
+    <div id="ImagenPerdido">
         <label>Nombre Producto:</label>
         <input type="text" name="tituloTienda" value="{{tituloTienda}}" required>
     </div>
 
-    <div id="fotoTienda">
+    <div id="FechaPerdido">
         <label> Tu Producto </label>
         <input type="text" name="fotoTienda" value="{{fotoTienda}}" required>
     </div>
-    <div id="categoriaTienda">
+    <div id="FechaPerdido">
         <label> Categoria Producto:</label>
         {{!-- <input type="text" name="FechaPerdido" required>  --}}
                <select name="Categoria" value="{{categoriaTienda}}" >
@@ -55,7 +55,7 @@
                     <option>Ropa</option>
                 </select>
     </div>
-    <div id="descripccionTienda">
+    <div id="DescripcionPerdido">
         <label>Descripcion:</label>
         <input type="text" name="descripccionTienda" value="{{descripccionTienda}}" required>
     </div>
@@ -66,3 +66,4 @@
     </form>
     {{/each}}
 </div>
+<br><br>
