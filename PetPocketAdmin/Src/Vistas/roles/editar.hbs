@@ -1,0 +1,67 @@
+
+    {{#each lista}}
+<form action="/roles/editar/{{idAdmin}}" method="post">
+    <div id="contenido">
+        <div id="titulo">Editar rol</div>
+            <center>
+        <div id="nombre">
+            <label>nombre</label>
+            <input type="text" name="nombre" value="{{nombre}}" readonly>
+        </div>
+        <div id="apellido">
+            <label>apellido</label>
+            <input type="text" name="apellido" value="{{apellido}}" readonly>
+        </div>
+        <div id="cedula">
+            <label>cedula</label>
+            <input type="text" name="cedula" value="{{cedula}}" readonly>
+        </div>
+        <div id="telefono">
+            <label>telefono</label>
+            <input type="text" name="telefono" value="{{telefono}}" readonly>
+        </div>
+        <div id="direccion">
+            <label>direccion</label>
+            <input type="text" name="direccion" value="{{direccion}}" readonly>
+        </div>
+        <div id="ciudad">
+            <label>ciudad</label>
+            <input type="text" name="ciudad" value="{{ciudad}}" readonly>
+        </div>
+        <div id="username">
+            <label>username</label>
+            <input type="text" name="username" value="{{username}}" readonly>
+        </div>
+        <div id="email">
+            <label>email</label>
+            <input type="text" name="email" value="{{email}}" readonly>
+        </div>
+        <div id="rol">
+        <label> Tipo de rol:</label>
+               <select name="rol" value="{{rol}}" >
+                    <option>mensajeria</option>
+                    <option>span</option>
+                    <option>promociones</option>
+
+                </select>
+    </div>
+     <div id="estado">
+        <label> Estado del administrador:</label>
+               <select name="estado" value="{{estado}}" >
+                    <option>activo</option>
+                    <option>inactivo</option>
+                </select>
+    </div>
+
+        <div id="boton">
+            <button type="submit">actualizar</button>
+        </div>
+        <br>
+         <div id="boton">
+          <a href="http://localhost:4000/roles/lista/3">  <button type="submit">cancelar</button></a>
+        </div>
+    </div>
+</form>
+        </center>
+
+{{/each}}

@@ -16,13 +16,13 @@ passport.use(
     async (req, username, password, done) => {
       const rows = await orm.adminUsuario.findOne({ where: { username: username } });
       if (rows) {
-        const user = rows;
+        const adminUsuario = rows;
         const validPassword = await helpers.matchPassword(
           password,
-          user.password
+          adminUsuario.password
         );
         if (validPassword) {
-          done(null, user, req.flash("message", "Bienvenido" + " " + user.username));
+          done(null, adminUsuario, req.flash("message", "Bienvenido" + " " + adminUsuario.username));
         } else {
           done(null, false, req.flash("message", "Datos incorrecta"));
         }

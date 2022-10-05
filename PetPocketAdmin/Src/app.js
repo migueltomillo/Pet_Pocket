@@ -57,6 +57,7 @@ app.use((req, res, next) => {
 app.use(express.static(path.join(__dirname, 'public')));
 //public
 
+app.use("/roles",require ('./Rutas/rol.rutas'))
 
 //routers
 app.use(require("./Rutas/index.rutas"))
