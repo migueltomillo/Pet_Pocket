@@ -6,8 +6,8 @@
  }
  #contenedor{
     background-color: #ffcb42;
-    width: 400px;
-    height: 420px;
+    width: 440px;
+    height: 480px;
     text-align: center;
     padding: 25px;
     border: solid 3px #277bc0;
@@ -51,4 +51,7 @@
     font-family: cursive;
     display: block;
     margin: 10px;
+ }
+ img{
+   width: 250px;
  }

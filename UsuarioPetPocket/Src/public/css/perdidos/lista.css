@@ -9,7 +9,7 @@
 }
 
 #stitulo{
-    font-size: 30px;
+    font-size: 40px;
     font-family: cursive;
     text-align: center;
  }
@@ -19,7 +19,7 @@
     padding: 5px;
     border-radius: 20px;
     border: solid 1px black;
-    margin-left: 80px;
+    margin-left: 110px;
     margin-top: 10px;
     display: inline-block;
  }
@@ -29,11 +29,14 @@
     padding: 5px;
     border-radius: 20px;
     border: solid 1px black;
-     margin-left: 75px;
+     margin-left: 105px;
     display: inline-block;
     margin-top: 10px;
  }
  p{
     font-size: 20px;
     text-align: center;
+ }
+ img{
+   width: 250px;
  }
