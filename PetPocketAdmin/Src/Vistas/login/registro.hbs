@@ -1,32 +1,25 @@
+<link rel="stylesheet" href="/css/registro.css" />
+<div id="body"></div>
+<div id="grad"></div>
+<div id="header">
+	<div>Pet Pocket <br>
+	<center>
+	<span><a href="http://localhost:4000/login">Login</a></span></div>
+	</center>
+</div>
+<br> 
+<form action="/registro" method="POST">
 
- 
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
- 
-  <link rel="stylesheet" href="/css/registro.css" />
- 
-<body>
-   <div class="container">
-     <div class="login-container">
-       <div class="register">
-         <h2>Registrarse</h2>
-         <form action="/registro" method="POST">
-            <input type="text" id="Nombre" name="username" placeholder="Usuario:" class="nombre">
-            <input type="password" id="Contraseña" name="password" placeholder="Contraseña:" class="password">
-           <center>
-           <input type="submit" class="submit" value="Registrarse">
-           </center>
-           <h8>¿ya tienes cuenta? <a href="http://localhost:4000/login">inicia sesion</a></h8>
-         </form>
-       </div>
-       <div class="login">
-         <h2>Iniciar Sesión</h2>
-         <div class="login-items">
-           <button class="fb"><a href="http://www.facebook.com/AQUI_TU_PAGINA" target="_blank"><img alt="Siguenos en Facebook" src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png" width=20 height=20 /></a> Acceder con Facebook</button>
-           <button class="tw"><a href="http://twitter.com/AQUI_TU_USUARIO" target="_blank"><img src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png" width=20 height=20 alt="Síguenos en Twitter" /></a> Acceder con Twitter</button>
-           <button class="correo"><a rel="author" href="https://plus.google.com/TU_ID_GOOGLE?rel=author" target="_blank"><img alt="Siguenos en Google+" src="https://lh5.googleusercontent.com/-F_FBKktZWZk/T3nN0v4FeAI/AAAAAAAAAsc/7dHTxkxn4cI/s32/google32.png" width=20 height=20  /></a> Acceder con Correo</button>
-         </div>
-       </div>
-     </div>
-   </div>
-</body>
-</html>
+	<div id="login">
+		<input type="text" placeholder="Primer nombre" name="nombre"required><br>
+		<input type="text" placeholder="Primer apellido" name="apellido" required><br>
+				<input type="text" placeholder="Cedula" name="cedula" required><br>
+		<input type="text" placeholder="telefono" name="telefono" required><br>
+		<input type="text" placeholder="direccion" name="direccion" required><br>
+		<input type="text" placeholder="ciudad" name="ciudad" required><br>
+		<input type="text" placeholder="username" name="username"required><br>
+		<input type="text" placeholder="email" name="email"required><br>
+		<input type="text" placeholder="contraseña" name="password"required><br>
+		<input type="submit" value="Registrar">
+	</div>
+</form>

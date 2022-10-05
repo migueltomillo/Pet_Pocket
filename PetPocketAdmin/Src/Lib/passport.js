@@ -14,7 +14,7 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const rows = await orm.usuario.findOne({ where: { username: username } });
+      const rows = await orm.adminUsuario.findOne({ where: { username: username } });
       if (rows) {
         const user = rows;
         const validPassword = await helpers.matchPassword(
@@ -30,7 +30,7 @@ passport.use(
         return done(
           null,
           false,
-          req.flash("message", "El nombre de usuario no existe.")
+          req.flash("message", "El nombre de administrador no existe.")
         );
       }
     }
@@ -46,19 +46,28 @@ passport.use(
       passReqToCallback: true
     },
     async (req, username, password, done) => {
-      const usuarios = await orm.usuario.findOne({ where: { username: username } });
-      if (usuarios === null) {
+      const adminUsuario = await orm.adminUsuario.findOne({ where: { username: username } });
+      if (adminUsuario === null) {
+        const { nombre, apellido, cedula,telefono,direccion,ciudad, email } = req.body
         let nuevoUsuario = {
+          nombre,
+          apellido,
+          cedula,
+          telefono,
+          direccion,
+          ciudad,
           username,
+          email,
           password
+        
         };
         nuevoUsuario.password = await helpers.encryptPassword(password);
-        const resultado = await orm.usuario.create(nuevoUsuario);
+        const resultado = await orm.adminUsuario.create(nuevoUsuario);
         nuevoUsuario.id = resultado.insertId;
         return done(null, nuevoUsuario);
       } else {
-        if (usuarios) {
-          const usuario = usuarios
+        if (adminUsuario) {
+          const usuario = adminUsuario
           if (username == usuario.username) {
             done(null, false, req.flash("message", "El nombre de usuario ya existe."))
           } else {

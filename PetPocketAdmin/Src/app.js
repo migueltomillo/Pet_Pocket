@@ -59,7 +59,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //routers
-
 app.use(require("./Rutas/index.rutas"))
 app.use(require("./Rutas/registro.rutas"))
 // Index

@@ -14,7 +14,7 @@ mysql.createConnection({
     })
 })
 
-const usuarioModelo = require('../Modelos/usuario')
+const adminUsuarioModelo = require('../Modelos/adminUsuario')
 const proyectoModelo = require('../Modelos/proyecto')
 
 const sequelize = new Sequelize(
@@ -46,14 +46,14 @@ sequelize.sync({ force: false })
     console.log("Tablas sincronizadas")
   })
 
-  const usuario = usuarioModelo(sequelize, Sequelize)
+  const adminUsuario = adminUsuarioModelo(sequelize, Sequelize)
   const proyecto = proyectoModelo(sequelize, Sequelize)
-
-  usuario.hasMany(proyecto)
-  proyecto.belongsTo(usuario)
+  
+  adminUsuario.hasMany(proyecto)
+  proyecto.belongsTo(adminUsuario)
 
 module.exports = {
-    usuario,
+  adminUsuario,
     proyecto
   
 }
