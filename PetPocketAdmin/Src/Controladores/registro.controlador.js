@@ -17,7 +17,7 @@ registro.mostrarLogin = (req, res, next) => {
 };
 
 registro.Login = passport.authenticate('local.signin', {
-    successRedirect: '/mensaje_bienvenida',
+    successRedirect: '/roles/lista/1',
     failureRedirect: '/login',
     failureFlash: true
 }); 

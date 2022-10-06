@@ -1,25 +1,52 @@
+<title>Barra lateral</title>
+</head>
+<link rel="stylesheet" href="/css/main.css">
 
-    <form action="/roles/lista/{{adminUsuario.idAdmin}}" method="get"></form>
-    <br><br>
-    <center>
-<div id="contenido">
-    <div id="raw">
-        {{#each lista}}
-        <div id="tarjeta">
-            <div id="titulo">
-              <h5>Nombre de la mascota</h5>  <p>{{ciudad}}</p>
-            </div>
-            <br>
-           
-            
-            <br>
-            <div id="editar">
-                <div id="boton">
-                    <a href="/roles/editar/{{idAdmin}}"><button type="button">Editar</button></a>
-                </div>
-            </div>
-           
-        </div>
-        {{/each}}
+<body>
+    <div id="body"></div>
+
+    <div id="sidebar">
+
+        <ul>
+            <li>
+                <img src="/multimedia/logocolor.png" alt="Logo Fazt" class="logo">
+            </li>
+            <a href="http://localhost:4000/roles/lista/1">
+                <li>Asignar rol</li>
+            </a>
+            <li>Promocion tienda</li>
+            <li>Agregar producto</li>
+            <li>Comunicado</li>
+            <li> Agregar veterinarias</li>
+
+        </ul>
     </div>
-</div></center>
+
+    <br>
+
+    <center>
+        <form action="/roles/lista/{{adminUsuario.idAdmin}}" method="get">
+        <h2>Asignacion de roles</h2>
+        {{#each lista}}
+        <br>
+         <div id="titulo">
+              <h5>Nombre : {{nombre}}</h5>
+            </div>
+             <div id="titulo">
+              <h5>Apellido: {{apellido}}</h5>
+            </div>
+            <div id="titulo">
+              <h5>Cedula: {{cedula}}</h5>
+            </div>
+        <div id="titulo">
+              <h5>Nombre de la ciudad: {{ciudad}}</h5>
+            </div>
+        
+       
+        <a href="/roles/editar/{{idAdmin}}"><input type="button" id="boton" value="Actualizar"></input></a>
+        </form>
+    </center>
+    {{/each}}
+
+    </div>
+

@@ -2,42 +2,42 @@
     {{#each lista}}
 <form action="/roles/editar/{{idAdmin}}" method="post">
     <div id="contenido">
-        <div id="titulo">Editar rol</div>
+        <h2>Actualizar administrador</h2>
             <center>
         <div id="nombre">
-            <label>nombre</label>
+            <h5>nombre</h5>
             <input type="text" name="nombre" value="{{nombre}}" readonly>
         </div>
         <div id="apellido">
-            <label>apellido</label>
+            <h5>apellido</h5>
             <input type="text" name="apellido" value="{{apellido}}" readonly>
         </div>
         <div id="cedula">
-            <label>cedula</label>
+            <h5>cedula</h5>
             <input type="text" name="cedula" value="{{cedula}}" readonly>
         </div>
         <div id="telefono">
-            <label>telefono</label>
+            <h5>telefono</h5>
             <input type="text" name="telefono" value="{{telefono}}" readonly>
         </div>
         <div id="direccion">
-            <label>direccion</label>
+            <h5>direccion</h5>
             <input type="text" name="direccion" value="{{direccion}}" readonly>
         </div>
         <div id="ciudad">
-            <label>ciudad</label>
+            <h5>ciudad</h5>
             <input type="text" name="ciudad" value="{{ciudad}}" readonly>
         </div>
         <div id="username">
-            <label>username</label>
+            <h5>username</h5>
             <input type="text" name="username" value="{{username}}" readonly>
         </div>
         <div id="email">
-            <label>email</label>
+            <h5>email</h5>
             <input type="text" name="email" value="{{email}}" readonly>
         </div>
         <div id="rol">
-        <label> Tipo de rol:</label>
+        <h5> Tipo de rol:</h5>
                <select name="rol" value="{{rol}}" >
                     <option>mensajeria</option>
                     <option>span</option>
@@ -46,20 +46,16 @@
                 </select>
     </div>
      <div id="estado">
-        <label> Estado del administrador:</label>
+        <h5> Estado del administrador:</h5>
                <select name="estado" value="{{estado}}" >
                     <option>activo</option>
                     <option>inactivo</option>
                 </select>
     </div>
-
-        <div id="boton">
-            <button type="submit">actualizar</button>
-        </div>
+<br>
+            <input type="submit" value="actualizar" id="boton1"></input>
         <br>
-         <div id="boton">
-          <a href="http://localhost:4000/roles/lista/3">  <button type="submit">cancelar</button></a>
-        </div>
+          <a href="http://localhost:4000/roles/lista/3">  <input type="submit" id="boton2" value="cancelar"></input></a>
     </div>
 </form>
         </center>

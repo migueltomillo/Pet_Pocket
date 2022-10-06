@@ -40,7 +40,7 @@ adminUserCtl.editar = async (req, res) => {
     await orm.adminUsuario.findOne({ where: { idAdmin: id } })
         .then(actualizar => {
             actualizar.update(nuevoEnvio)
-            req.flash('success', 'se actualizo con exito')
+            req.flash('success', 'se actualizo con exito  ')
             res.redirect('/roles/lista/' + ids);
         })
 }
