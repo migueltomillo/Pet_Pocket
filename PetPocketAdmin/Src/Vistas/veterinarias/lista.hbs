@@ -1,6 +1,6 @@
 <title>Barra lateral</title>
 </head>
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/veterinaria/main.css">
 
 <body>
     <div id="body"></div>
@@ -31,23 +31,36 @@
     <br>
 
     <center>
-        <form action="/roles/lista/{{adminUsuario.idAdmin}}" method="get">
-        <h2>Visualizacion de comunicados</h2>
+        <form action="/veterinarias/lista/{{adminUsuario.idAdmin}}" method="get">
+        <h2>Veterinarias Recomendadas</h2>
         <br>
-        <a href="http://localhost:4000/comunicados/agregar/1">Agregar nuevo comunicado</a>
+        <a href="http://localhost:4000/veterinarias/agregar/1">Agregar nueva veterinaria</a>
         {{#each lista}}
         <br><br>
          <div id="titulo">
               <h5>Titulo : {{titulo}}</h5>
             </div>
-             <div id="titulo">
-              <h5>Descripcion: {{descripcion}}</h5>
+             <div id="descripcion">
+              <h5>descripcion: {{descripcion}}</h5>
+            </div>
+             <div id="especialidad">
+              <h5>Especialidad: {{especialidad}}</h5>
+            </div>
+             <div id="ciudad">
+              <h5>Ciudad: {{ciudad}}</h5>
+            </div>
+           
+              <div id="contacto">
+              <h5>Contacto: {{contacto}}</h5>
+            </div>
+              <div id="ubicacion">
+              <h5>ubicacion: {{ubicacion}}</h5>
             </div>
            
         
        
-        <a href="/comunicados/editar/{{idComunicados}}"><input type="button" id="boton" value="Actualizar"></input></a>
-                <a href="/comunicados/eliminar/{{idComunicados}}"><input type="button" id="boton2" value="Eliminar"></input></a>
+        <a href="/veterinarias/editar/{{idVeterinarias}}"><input type="button" id="boton" value="Actualizar"></input></a>
+                <a href="/veterinarias/eliminar/{{idVeterinarias}}"><input type="button" id="boton2" value="Eliminar"></input></a>
 
         </form>
     </center>

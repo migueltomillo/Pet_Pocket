@@ -1,8 +1,10 @@
 <title>Barra lateral</title>
 </head>
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/veterinaria/main.css">
 
 <body>
+    <div id="body"></div>
+
     <div id="body"></div>
 
      <div id="sidebar">
@@ -31,8 +33,8 @@
     <br>
 
     <div>
-        <form action="/comunicados/agregar/{{user.idAdmin}}" method="post" id="contenedor">
-            <h5>Agregar comunicado </h5>
+        <form action="/veterinarias/agregar/{{user.idAdmin}}" method="post" id="contenedor">
+            <h5>Agregar veterinaria </h5>
             <br>
 
             <div id="contenido">
@@ -41,8 +43,34 @@
                     <input type="text" name="titulo" required>
                 </div>
                 <div id="descripcion">
-                    <h2>descripcion</h2>
-                    <textarea name="descripcion" id="" rows="10"></textarea>
+                    <h2>Descripcion</h2>
+                    <textarea type="text" name="descripcion" required>        </textarea>
+
+                </div>
+                <center>
+                    <div id="rol">
+                        <h5> Especialidad:</h5>
+                        <select name="especialidad">
+                            <option>Cirugias</option>
+                            <option>Peluqueria</option>
+                            <option>Revision</option>
+
+                        </select>
+                    </div>
+                </center>
+                <div id="ciudad">
+                    <h2>Ciudad</h2>
+                    <input type="text" name="ciudad" required>
+                </div>
+
+                <div id="contacto">
+                    <h2>Contacto</h2>
+                    <input type="text" name="contacto" required>
+                </div>
+
+                <div id="ubicacion">
+                    <h2>Ubicacion</h2>
+                    <input type="text" name="ubicacion" required>
                 </div>
 
                 <br>

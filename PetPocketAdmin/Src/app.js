@@ -60,6 +60,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use("/roles",require ('./Rutas/rol.rutas'))
 app.use("/comunicados",require ('./Rutas/comunicado.rutas'))
 app.use("/promociones",require ('./Rutas/promocion.rutas'))
+app.use("/veterinarias",require ('./Rutas/veterinaria.rutas'))
+
 
 //routers
 app.use(require("./Rutas/index.rutas"))

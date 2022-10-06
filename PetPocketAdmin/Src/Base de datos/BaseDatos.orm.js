@@ -18,6 +18,7 @@ const adminUsuarioModelo = require('../Modelos/adminUsuario')
 const proyectoModelo = require('../Modelos/proyecto')
 const comunicadoModelo = require('../Modelos/comunicado')
 const promocionModelo = require('../Modelos/promocion')
+const veterinariaModelo = require('../Modelos/veterinaria')
 
 const sequelize = new Sequelize(
   'PetPocket',
@@ -52,16 +53,19 @@ sequelize.sync({ force: false })
   const proyecto = proyectoModelo(sequelize, Sequelize)
   const comunicados = comunicadoModelo(sequelize, Sequelize)
   const promociones = promocionModelo(sequelize, Sequelize)
+  const veterinarias = veterinariaModelo(sequelize, Sequelize)
 
   adminUsuario.hasMany(proyecto)
   proyecto.belongsTo(adminUsuario)
   comunicados.belongsTo(comunicados)
   promociones.belongsTo(promociones)
+  veterinarias.belongsTo(veterinarias)
 
 module.exports = {
   adminUsuario,
     proyecto,
     comunicados,
-    promociones
+    promociones,
+    veterinarias
   
 }

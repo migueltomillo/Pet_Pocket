@@ -1,10 +1,11 @@
 <title>Barra lateral</title>
 </head>
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/veterinaria/main.css">
 
 <body>
     <div id="body"></div>
 
+    <div id="body"></div>
 
      <div id="sidebar">
 
@@ -31,7 +32,7 @@
 
     <br>
     {{#each lista}}
-    <form action="/promociones/editar/{{idPromociones}}" method="post">
+    <form action="/veterinarias/editar/{{idVeterinarias}}" method="post">
         <div id="contenido">
             <h2>Actualizar administrador</h2>
             <center>
@@ -40,25 +41,34 @@
                     <input type="text" name="titulo" value="{{titulo}}">
                 </div>
 
-                <div id="tipoDescuento">
-                    <h5> Tipo de descuento:</h5>
-                    <select name="tipoDescuento" value="{{tipoDescuento}}">
-                        <option>10%</option>
-                        <option>20%</option>
-                        <option>30%</option>
+ <div id="descripcion">
+                    <h5>descripcion</h5>
+                    <textarea type="text" name="descripcion"> {{descripcion}}</textarea>
+
+                </div>
+                <div id="especialidad">
+                    <h5> Especialidad:</h5>
+                    <select name="especialidad" value="{{especialidad}}">
+                         <option>Cirugias</option>
+                            <option>Peluqueria</option>
+                            <option>Revision</option>
 
                     </select>
                 </div>
 
-                <div id="informacion">
-                    <h5>Informacion</h5>
-                    <input type="text" name="informacion" value="{{informacion}}">
+                <div id="ciudad">
+                    <h5>ciudad</h5>
+                    <input type="text" name="ciudad" value="{{ciudad}}">
                 </div>
 
-                <div id="Marcas">
-                    <h5>marcas</h5>
-                    <textarea type="text" name="marcas"> {{marcas}}</textarea>
+                <div id="contacto">
+                    <h5>contacto</h5>
+                    <input type="text" name="contacto" value="{{contacto}}">
+                </div>
 
+                <div id="ubicacion">
+                    <h5>ubicacion</h5>
+                    <input type="text" name="ubicacion" value="{{ubicacion}}">
                 </div>
                 <br>
                 <input type="submit" value="actualizar" id="boton1"></input>

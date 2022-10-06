@@ -1,13 +1,16 @@
 const veterinarias =(sequelize, type) =>{
     return sequelize.define('veterinarias', {
-        idveterinarias: {
+        idVeterinarias: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        titulo: type.STRING(99),
-        descripcion: type.STRING(99),
-        telefono: type.INTEGER(10),
+        titulo: type.STRING,
+        descripcion: type.STRING,
+        especialidad: type.STRING,
+        ciudad: type.STRING,
+        contacto: type.STRING(10),
+        ubicacion: type.STRING,
 
         creacionVeterinarias:{
             type: 'TIMESTAMP',
