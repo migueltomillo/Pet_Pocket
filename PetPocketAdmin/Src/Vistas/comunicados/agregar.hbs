@@ -1,4 +1,3 @@
-
 <title>Barra lateral</title>
 </head>
 <link rel="stylesheet" href="/css/main.css">
@@ -6,7 +5,7 @@
 <body>
     <div id="body"></div>
 
-       <div id="sidebar">
+    <div id="sidebar">
 
         <ul>
             <li>
@@ -15,7 +14,7 @@
             <a href="http://localhost:4000/roles/lista/1">
                 <li>Asignar rol</li>
             </a>
-            <a href="http://localhost:4000/promocion/lista/1">
+            <a href="http://localhost:4000/promociones/lista/1">
                 <li>Promocion tienda</li>
             </a>
             <a href="http://localhost:4000/producto/lista/1">
@@ -30,97 +29,25 @@
     </div>
 
     <br>
-    
+
     <div>
-        <form action="/comunicados/agregar/{{user.idAdmin}}" method="post"id="contenedor">
-                <h5>Agregar comunicado </h5>
-                    <br>
+        <form action="/comunicados/agregar/{{user.idAdmin}}" method="post" id="contenedor">
+            <h5>Agregar comunicado </h5>
+            <br>
 
-    <div id="contenido">
-        <div id="titulo">
-            <h2>titulo</h2>
-            <input type="text" name="titulo" required>
-        </div>
-        <div id="descripcion">
-            <h2>descripcion</h2>
-<textarea name="descripcion" id=""  rows="10"></textarea>
-        </div>
-      
-        <br>
-                    <input type="submit" value="Guardar" id="boton"></input>
+            <div id="contenido">
+                <div id="titulo">
+                    <h2>titulo</h2>
+                    <input type="text" name="titulo" required>
+                </div>
+                <div id="descripcion">
+                    <h2>descripcion</h2>
+                    <textarea name="descripcion" id="" rows="10"></textarea>
+                </div>
 
-      
+                <br>
+                <input type="submit" value="Guardar" id="boton"></input>
+
+
+            </div>
     </div>
-    </div>
-    
-
-    
-
-
-
-
-
-
-
-    {{#each lista}}
-<form action="/roles/editar/{{idAdmin}}" method="post">
-    <div id="contenido">
-        <h2>Actualizar administrador</h2>
-            <center>
-        <div id="nombre">
-            <h5>nombre</h5>
-            <input type="text" name="nombre" value="{{nombre}}" readonly>
-        </div>
-        <div id="apellido">
-            <h5>apellido</h5>
-            <input type="text" name="apellido" value="{{apellido}}" readonly>
-        </div>
-        <div id="cedula">
-            <h5>cedula</h5>
-            <input type="text" name="cedula" value="{{cedula}}" readonly>
-        </div>
-        <div id="telefono">
-            <h5>telefono</h5>
-            <input type="text" name="telefono" value="{{telefono}}" readonly>
-        </div>
-        <div id="direccion">
-            <h5>direccion</h5>
-            <input type="text" name="direccion" value="{{direccion}}" readonly>
-        </div>
-        <div id="ciudad">
-            <h5>ciudad</h5>
-            <input type="text" name="ciudad" value="{{ciudad}}" readonly>
-        </div>
-        <div id="username">
-            <h5>username</h5>
-            <input type="text" name="username" value="{{username}}" readonly>
-        </div>
-        <div id="email">
-            <h5>email</h5>
-            <input type="text" name="email" value="{{email}}" readonly>
-        </div>
-        <div id="rol">
-        <h5> Tipo de rol:</h5>
-               <select name="rol" value="{{rol}}" >
-                    <option>mensajeria</option>
-                    <option>span</option>
-                    <option>promociones</option>
-
-                </select>
-    </div>
-     <div id="estado">
-        <h5> Estado del administrador:</h5>
-               <select name="estado" value="{{estado}}" >
-                    <option>activo</option>
-                    <option>inactivo</option>
-                </select>
-    </div>
-<br>
-            <input type="submit" value="actualizar" id="boton1"></input>
-        <br>
-          <a href="http://localhost:4000/roles/lista/3">  <input type="submit" id="boton2" value="cancelar"></input></a>
-    </div>
-</form>
-        </center>
-
-{{/each}}

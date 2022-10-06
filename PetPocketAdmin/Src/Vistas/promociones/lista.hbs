@@ -14,7 +14,7 @@
             <a href="http://localhost:4000/roles/lista/1">
                 <li>Asignar rol</li>
             </a>
-            <a href="http://localhost:4000/promociones/lista/1">
+            <a href="http://localhost:4000/promocion/lista/1">
                 <li>Promocion tienda</li>
             </a>
             <a href="http://localhost:4000/producto/lista/1">
@@ -31,23 +31,29 @@
     <br>
 
     <center>
-        <form action="/roles/lista/{{adminUsuario.idAdmin}}" method="get">
-        <h2>Visualizacion de comunicados</h2>
+        <form action="/promociones/lista/{{adminUsuario.idAdmin}}" method="get">
+        <h2>Descuentos activos</h2>
         <br>
-        <a href="http://localhost:4000/comunicados/agregar/1">Agregar nuevo comunicado</a>
+        <a href="http://localhost:4000/promociones/agregar/1">Agregar nuevo descuento</a>
         {{#each lista}}
         <br><br>
          <div id="titulo">
               <h5>Titulo : {{titulo}}</h5>
             </div>
-             <div id="titulo">
-              <h5>Descripcion: {{descripcion}}</h5>
+             <div id="tipoDescuento">
+              <h5>Tipo de descuento: {{tipoDescuento}}</h5>
+            </div>
+             <div id="informacion">
+              <h5>Informacion: {{informacion}}</h5>
+            </div>
+             <div id="marcas">
+              <h5>Marcas: {{marcas}}</h5>
             </div>
            
         
        
-        <a href="/comunicados/editar/{{idComunicados}}"><input type="button" id="boton" value="Actualizar"></input></a>
-                <a href="/comunicados/eliminar/{{idComunicados}}"><input type="button" id="boton2" value="Eliminar"></input></a>
+        <a href="/promociones/editar/{{idPromociones}}"><input type="button" id="boton" value="Actualizar"></input></a>
+                <a href="/promociones/eliminar/{{idPromociones}}"><input type="button" id="boton2" value="Eliminar"></input></a>
 
         </form>
     </center>

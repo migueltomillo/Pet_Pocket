@@ -1,0 +1,71 @@
+<title>Barra lateral</title>
+</head>
+<link rel="stylesheet" href="/css/main.css">
+
+<body>
+    <div id="body"></div>
+
+    <div id="sidebar">
+
+        <ul>
+            <li>
+                <img src="/multimedia/logocolor.png" alt="Logo Fazt" class="logo">
+            </li>
+            <a href="http://localhost:4000/roles/lista/1">
+                <li>Asignar rol</li>
+            </a>
+            <a href="http://localhost:4000/promociones/lista/1">
+                <li>Promocion tienda</li>
+            </a>
+            <a href="http://localhost:4000/producto/lista/1">
+                <li>Agregar producto</li>
+            </a> <a href="http://localhost:4000/comunicados/lista/1">
+                <li>Comunicado</li>
+            </a>
+            <a href="http://localhost:4000/veterinaria/lista/1">
+                <li>Agregar veterinarias</li>
+            </a>
+        </ul>
+    </div>
+
+    <br>
+    {{#each lista}}
+    <form action="/promociones/editar/{{idPromociones}}" method="post">
+        <div id="contenido">
+            <h2>Actualizar administrador</h2>
+            <center>
+                <div id="titulo">
+                    <h5>titulo</h5>
+                    <input type="text" name="titulo" value="{{titulo}}">
+                </div>
+
+                <div id="tipoDescuento">
+                    <h5> Tipo de descuento:</h5>
+                    <select name="tipoDescuento" value="{{tipoDescuento}}">
+                        <option>10%</option>
+                        <option>20%</option>
+                        <option>30%</option>
+
+                    </select>
+                </div>
+
+                <div id="informacion">
+                    <h5>Informacion</h5>
+                    <input type="text" name="informacion" value="{{informacion}}">
+                </div>
+
+                <div id="Marcas">
+                    <h5>marcas</h5>
+                    <textarea type="text" name="marcas"> {{marcas}}</textarea>
+
+                </div>
+                <br>
+                <input type="submit" value="actualizar" id="boton1"></input>
+                <br>
+                <a href="http://localhost:4000/promociones/lista/3"> <input type="submit" id="boton2"
+                        value="cancelar"></input></a>
+        </div>
+    </form>
+    </center>
+
+    {{/each}}

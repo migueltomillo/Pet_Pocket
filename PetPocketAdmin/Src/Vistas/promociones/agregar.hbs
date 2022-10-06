@@ -1,0 +1,75 @@
+
+<title>Barra lateral</title>
+</head>
+<link rel="stylesheet" href="/css/main.css">
+
+<body>
+    <div id="body"></div>
+
+       <div id="sidebar">
+
+        <ul>
+            <li>
+                <img src="/multimedia/logocolor.png" alt="Logo Fazt" class="logo">
+            </li>
+            <a href="http://localhost:4000/roles/lista/1">
+                <li>Asignar rol</li>
+            </a>
+            <a href="http://localhost:4000/promociones/lista/1">
+                <li>Promocion tienda</li>
+            </a>
+            <a href="http://localhost:4000/producto/lista/1">
+                <li>Agregar producto</li>
+            </a> <a href="http://localhost:4000/comunicados/lista/1">
+                <li>Comunicado</li>
+            </a>
+            <a href="http://localhost:4000/veterinaria/lista/1">
+                <li>Agregar veterinarias</li>
+            </a>
+        </ul>
+    </div>
+
+    <br>
+    
+    <div>
+        <form action="/promociones/agregar/{{user.idAdmin}}" method="post"id="contenedor">
+                <h5>Agregar promocion </h5>
+                    <br>
+
+    <div id="contenido">
+        <div id="titulo">
+            <h2>titulo</h2>
+            <input type="text" name="titulo" required>
+        </div>
+       <center>
+       <div id="rol">
+                    <h5> Tipo de descuento:</h5>
+                    <select name="tipoDescuento" >
+                        <option>10%</option>
+                        <option>20%</option>
+                        <option>30%</option>
+
+                    </select>
+                </div>
+</center>
+                <div id="informacion">
+            <h2>Informacion</h2>
+            <input type="text" name="informacion" required>
+        </div>
+
+            <div id="Marcas">
+            <h2>Marcas</h2>
+            <textarea type="text" name="marcas" required>        </textarea>
+
+        </div>
+        <br>
+                    <input type="submit" value="Guardar" id="boton"></input>
+
+      
+    </div>
+    </div>
+    
+
+    
+
+
