@@ -33,23 +33,22 @@
     <center>
         <form action="/roles/lista/{{adminUsuario.idAdmin}}" method="get">
         <h2>Asignacion de roles</h2>
-        {{#each lista}}
         <br>
+        <a href="http://localhost:4000/comunicados/agregar/1">Agregar nuevo comunicado</a>
+        {{#each lista}}
+        <br><br>
          <div id="titulo">
-              <h5>Nombre : {{nombre}}</h5>
+              <h5>Titulo : {{titulo}}</h5>
             </div>
              <div id="titulo">
-              <h5>Apellido: {{apellido}}</h5>
+              <h5>Descripcion: {{descripcion}}</h5>
             </div>
-            <div id="titulo">
-              <h5>Cedula: {{cedula}}</h5>
-            </div>
-        <div id="titulo">
-              <h5>Nombre de la ciudad: {{ciudad}}</h5>
-            </div>
+           
         
        
-        <a href="/roles/editar/{{idAdmin}}"><input type="button" id="boton" value="Actualizar"></input></a>
+        <a href="/comunicados/editar/{{idComunicados}}"><input type="button" id="boton" value="Actualizar"></input></a>
+                <a href="/comunicados/eliminar/{{idComunicados}}"><input type="button" id="boton2" value="Eliminar"></input></a>
+
         </form>
     </center>
     {{/each}}

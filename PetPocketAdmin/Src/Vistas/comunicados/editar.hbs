@@ -5,7 +5,7 @@
 <body>
     <div id="body"></div>
 
-     <div id="sidebar">
+    <div id="sidebar">
 
         <ul>
             <li>
@@ -29,30 +29,27 @@
     </div>
 
     <br>
-
-    <center>
-        <form action="/roles/lista/{{adminUsuario.idAdmin}}" method="get">
-        <h2>Asignacion de roles</h2>
-        {{#each lista}}
-        <br>
-         <div id="titulo">
-              <h5>Nombre : {{nombre}}</h5>
-            </div>
-             <div id="titulo">
-              <h5>Apellido: {{apellido}}</h5>
-            </div>
-            <div id="titulo">
-              <h5>Cedula: {{cedula}}</h5>
-            </div>
+    {{#each lista}}
+<form action="/comunicados/editar/{{idComunicados}}" method="post">
+    <div id="contenido">
+        <h2>Actualizar administrador</h2>
+            <center>
         <div id="titulo">
-              <h5>Nombre de la ciudad: {{ciudad}}</h5>
-            </div>
-        
-       
-        <a href="/roles/editar/{{idAdmin}}"><input type="button" id="boton" value="Actualizar"></input></a>
-        </form>
-    </center>
-    {{/each}}
+            <h5>titulo</h5>
+            <input type="text" name="titulo" value="{{titulo}}" >
+        </div>
+        <div id="descripcion">
+            <h5>descripcion</h5>
+            <textarea type="text" name="descripcion"  > {{descripcion}}</textarea>
 
+        </div>
+      
+<br>
+            <input type="submit" value="actualizar" id="boton1"></input>
+        <br>
+          <a href="http://localhost:4000/roles/lista/3">  <input type="submit" id="boton2" value="cancelar"></input></a>
     </div>
+</form>
+        </center>
 
+{{/each}}
