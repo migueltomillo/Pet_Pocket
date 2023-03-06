@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const mysql = require('mysql2/promise')
 
-const dbName = process.env.DB_SCHEMAS || "PetPocket";
+const dbName =  "PetPocket";
 
 mysql.createConnection({
     host: process.env.DB_HOST || "127.0.0.1",

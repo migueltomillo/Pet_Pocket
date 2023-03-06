@@ -1,9 +1,9 @@
-    <LINK REL="stylesheet" HREF="/css/mascotas/registro.css" TYPE="text/css" >
-      <link rel="stylesheet" href="/css/navegador.css" />
+<link rel="stylesheet" href="/css/navegador.css" />
+<link rel="stylesheet" href="/css/mascotas/registro.css" />
 
 <body
     background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
-   <header>
+    <header>
         <nav id="nav">
 
             <!--Aqui va el nombre-->
@@ -11,7 +11,7 @@
             <!--Aqui se acaba-->
 
             <ul id="menu">
-               <li><a href="http://localhost:4000/mascota/agregar/1">Mascota</a></li>
+                <li><a href="http://localhost:4000/mascota/agregar/1">Mascota</a></li>
                 <li><a href="http://localhost:4000/perdido/agregar/1">Perdidos</a></li>
                 <li><a href="http://localhost:4000/adopcion">Adopcion</a></li>
                 <li><a href="http://localhost:4000/bells/agregar/1">Campañas</a></li>
@@ -20,58 +20,58 @@
                 <li><a href="http://localhost:4000/veterinaria/agregar/1">Veterinaria</a></li>
                 <li><a href="http://localhost:4000/tienda/agregar/1">Tienda</a></li>
                 <li><a href="http://localhost:4000/login">cerrar sesion</a></li>
-                
+
                 <!--Aqui se acaba-->
             </ul>
         </nav>
     </header>
     <!--Aqui se acaba el nav-->
     <div id="titulo">
-        <p>Agregar mascotas </p>
+
+        <p>Agregar Mascotas </p>
+
+    </div>
     </div>
     <div>
-        <form action="/mascota/agregar/{{user.idUsuarios}}" method="post"id="contenedor">
-    <div id="contenido">
-        <div id="nombre">
-            <label>Nombre de la mascota</label>
-            <input type="text" name="nombre" required>
-        </div>
-        <div id="raza">
-            <label>raza</label>
-            <input type="text" name="raza" required>
-        </div>
-         <div id="edad">
-            <label>Edad</label>
-            <input type="number" name="edad" required>
-        </div>
-         <div id="Peso">
-            <label>Peso</label>
-            <input type="number" name="peso" required>
-        </div>
-         <div id="descripcion">
-            <label>descripcion</label>
-            <input type="text" name="descripcion" required>
-        </div>
-         <div id="foto">
-            <label>foto</label>
-            <input type="text" name="foto" required>
-        </div>
-        <br>
-        <div id="boton">
-            <button type="submit">Guardar</button>
-        </div>
-    </div>
+        <form action="/mascota/agregar/{{user.idUsuarios}}" method="post" id="contenedor">
+            <div id="contenido">
+                <div id="nombre">
+                    <label>Nombre de la mascota</label>
+                    <input type="text" name="nombre" required>
+                </div>
+                <div id="raza">
+                    <label>Raza</label>
+                    <input type="text" name="raza" required>
+                </div>
+                <div id="edad">
+                    <label>Edad</label>
+                    <input type="number" name="edad" required>
+                </div>
+                <div id="Peso">
+                    <label>Peso</label>
+                    <input type="number" name="peso" required>
+                </div>
+                <div id="descripcion">
+                    <label>Descripcion</label>
+                    <input type="text" name="descripcion" required>
+                </div>
+                <div id="foto">
+                    <label>Foto</label>
+                    <input type="text" name="foto" required>
+                </div>
+                <br>
+                <div id="boton">
+                    <button type="submit">Guardar</button>
+                </div>
+            </div>
     </div>
     <br><br>
 
-    
+
+    </div>
+
 
 
 </body>
 
 </html>
-
-
-
-
-

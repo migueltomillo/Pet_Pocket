@@ -1,8 +1,8 @@
-    <LINK REL="stylesheet" HREF="/css/mascotas/registro.css" TYPE="text/css" >
-    <link rel="stylesheet" href="/css/mascotas/editar.css">
+<LINK REL="stylesheet" HREF="/css/mascotas/registro.css" TYPE="text/css">
+<link rel="stylesheet" href="/css/mascotas/editar.css">
 
-    <link rel="stylesheet" href="/css/navegador.css" />
-    <link rel="icon" href="/multimedia/Recurso 4.ico">
+<link rel="stylesheet" href="/css/navegador.css" />
+<link rel="icon" href="/multimedia/Recurso 4.ico">
 
 <body
     background="https://static.vecteezy.com/system/resources/previews/002/705/240/large_2x/background-of-dog-paw-prints-vector.jpg">
@@ -15,8 +15,8 @@
 
             <ul id="menu">
 
-                
-           <li><a href="http://localhost:4000/mascota/agregar/1">Mascota</a></li>
+
+                <li><a href="http://localhost:4000/mascota/agregar/1">Mascota</a></li>
                 <li><a href="http://localhost:4000/perdido/agregar/1">Perdidos</a></li>
                 <li><a href="http://localhost:4000/adopcion">Adopcion</a></li>
                 <li><a href="http://localhost:4000/bells/agregar/1">Campañas</a></li>
@@ -25,45 +25,45 @@
                 <li><a href="http://localhost:4000/veterinaria/agregar/1">Veterinaria</a></li>
                 <li><a href="http://localhost:4000/tienda/agregar/1">Tienda</a></li>
                 <li><a href="http://localhost:4000/login">cerrar sesion</a></li>
-                
+
                 <!--Aqui se acaba-->
             </ul>
         </nav>
     </header>
     {{#each lista}}
-<form action="/mascota/editar/{{idMascotas}}" method="post">
-    <div id="contenido">
-        <div id="titulo">Editar Mascota</div>
+    <form action="/mascota/editar/{{idMascotas}}" method="post">
+        <div id="contenido">
+            <div id="titulo">Editar Mascota</div>
             <center>
-        <div id="Nombre">
-            <label>nombre</label>
-            <input type="text" name="nombre" value="{{nombre}}" required>
-        </div>
-        <div id="raza">
-            <label>raza</label>
-            <input type="text" name="raza" value="{{raza}}" required>
-        </div>
-        <div id="edad">
-            <label>edad</label>
-            <input type="number" name="edad" value="{{edad}}" required>
-        </div>
-        <div id="peso">
-            <label>peso</label>
-            <input type="number" name="peso" value="{{peso}}" required>
-        </div>
-        <div id="descripcion">
-            <label>descripcion</label>
-            <input type="text" name="descripcion" value="{{descripcion}}" required>
-        </div>
-        <div id="foto">
-            <label>foto</label>
-            <input type="text" name="foto" value="{{foto}}" required>
-        </div>
-        </center>
+                <div id="Nombre">
+                    <label>nombre</label>
+                    <input type="text" name="nombre" value="{{nombre}}" required>
+                </div>
+                <div id="raza">
+                    <label>raza</label>
+                    <input type="text" name="raza" value="{{raza}}" required>
+                </div>
+                <div id="edad">
+                    <label>edad</label>
+                    <input type="number" name="edad" value="{{edad}}" required>
+                </div>
+                <div id="peso">
+                    <label>peso</label>
+                    <input type="number" name="peso" value="{{peso}}" required>
+                </div>
+                <div id="descripcion">
+                    <label>descripcion</label>
+                    <input type="text" name="descripcion" value="{{descripcion}}" required>
+                </div>
+                <div id="foto">
+                    <label>foto</label>
+                    <input type="text" name="foto" value="{{foto}}" required>
+                </div>
+            </center>
 
-        <div id="boton">
-            <button type="submit">Guardar</button>
+            <div id="boton">
+                <button type="submit">Guardar</button>
+            </div>
         </div>
-    </div>
-</form>
-{{/each}}
+    </form>
+    {{/each}}

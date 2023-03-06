@@ -23,9 +23,10 @@ veterinariaCtl.mandar = async (req, res) => {
     res.redirect('/veterinaria/lista/' + id);
 }
 
+
 veterinariaCtl.lista = async (req, res) => {
     const lista = await sql.query('select * from veterinarias')
-    res.render('veterinaria/lista', { lista })
+    res.render('veterinaria/lista', { lista:lista })
 }
 
 veterinariaCtl.eliminar = async (req, res) => {

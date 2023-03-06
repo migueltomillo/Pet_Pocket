@@ -37,11 +37,10 @@
         </b></u>
 
     <!--inicio del crud-->
-    <form action="/veterinaria/lista/{{user.idUsuarios}}" method="get">
         <div id="contenedor">
             <div id="row">
                 {{#each lista}}
-                <div id="tarjeta">
+                <div id="lista{{@key}}">
                     <div id="nombre">
                         <p>{{nombre}}</p>
                     </div>

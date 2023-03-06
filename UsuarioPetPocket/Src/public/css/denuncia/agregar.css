@@ -4,18 +4,24 @@
     box-sizing: border-box;
 }
 
-#contenedor{
-    width: 500px;
-    max-width: 100%;
-    margin: auto;
-    margin-top: 30px;
-    padding: 20px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
-    position: relative;
-    background: rgb(255, 184, 62);
-    margin-bottom: 30px;
+ #contenedor{
+    background-color: #ffcb42;
+    width: 400px;
+    height: 390px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 25px;
+    border: solid 3px #277bc0;
 }
-
+input{
+    background-color: #277bc0;
+    border: solid 1px rgb(31, 28, 28);
+    padding: 3px;
+    width: 220px;
+    color: #fff;
+    margin-top: 1px;
+    border-radius: 20px;
+ }
 #tituloTienda{
     font-size: 20px;
     text-align: center;
@@ -36,12 +42,15 @@
     text-align: center;
     padding: 10px;
 }
-#boton{
-    width: 40%;
-    height: 2em;
-    margin-left: 40%;
-    padding: 20px;
-}
+button{
+    background-color: #d1ca66;
+    border: solid 1px rgb(31, 28, 28);
+    padding: 2px;
+    width: 130px;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 20px;
+ }
 
 #intro{
     text-align: center;
@@ -49,6 +58,20 @@
     color: rgb(255, 0, 0);
     margin-top: 40px;
 }
-
+label{
+    color: #fff;
+    font-family: cursive;
+    display: block;
+    margin: 10px;
+ }
+ select{
+    background-color: #277bc0;
+    border: solid 1px rgb(31, 28, 28);
+    padding: 5px;
+    width: 220px;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 20px;
+ }
 
 

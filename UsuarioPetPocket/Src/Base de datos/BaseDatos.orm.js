@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const mysql = require('mysql2/promise')
 
-const dbName = process.env.DB_SCHEMAS || "PetPocket";
+const dbName =  "petpocket";
 
 mysql.createConnection({
     host: process.env.DB_HOST || "127.0.0.1",
@@ -26,7 +26,7 @@ const denuncialoModelo = require('../Modelos/denuncialo')
 const adopcionModelo = require('../Modelos/adopcion')
 
 const sequelize = new Sequelize(
-  'PetPocket',
+  'petpocket',
   'root',
   '',
   {

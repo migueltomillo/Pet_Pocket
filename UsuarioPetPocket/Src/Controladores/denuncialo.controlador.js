@@ -18,7 +18,7 @@ denuncialoCTl.mandar = async (req, res) => {
     }
     await orm.denuncialo.create(nuevoDenuncialo)
     req.flash('success', 'Guardado con exito')
-    res.redirect('/denuncialo/lista/' + id);
+    res.redirect('/denuncialo/lista');
 }
 
 denuncialoCTl.lista = async (req, res) => {
